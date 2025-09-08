@@ -13,41 +13,30 @@ function Hero() {
           <Typography
             variant="h1"
             color="white"
-            className="md:max-w-full lg:max-w-3xl"
-            placeholder={undefined}
-            onResize={undefined}
-            onResizeCapture={undefined}
-            onPointerEnterCapture={undefined}
-            onPointerLeaveCapture={undefined}
+            className="uppercase text-4xl md:text-5xl lg:text-6xl font-bold text-center mx-auto"
+            {...({} as any)}
           >
-            Master the Power of React Beginner Course
+            Professional Satellite Dish Installation
           </Typography>
+
 
           <Typography
             variant="lead"
             color="white"
             className="mt-6 mb-10 w-full md:max-w-full lg:max-w-3xl"
-            placeholder={undefined}
-            onResize={undefined}
-            onResizeCapture={undefined}
-            onPointerEnterCapture={undefined}
-            onPointerLeaveCapture={undefined}
+            {...({} as any)}
           >
-            Our React Course is your gateway to becoming a proficient React
-            developer. Learn to build dynamic and interactive web applications
-            using one of the most popular JavaScript libraries in the industry.
+            Get fast and reliable satellite dish installation for your home or
+            office. Our expert technicians ensure perfect alignment and
+            high-quality signal reception for all major providers.
           </Typography>
 
           <Button
             variant="gradient"
             color="white"
-            placeholder={undefined}
-            onResize={undefined}
-            onResizeCapture={undefined}
-            onPointerEnterCapture={undefined}
-            onPointerLeaveCapture={undefined}
+            {...({} as any)}
           >
-            ENROLL TODAY
+            BOOK INSTALLATION
           </Button>
         </div>
       </div>

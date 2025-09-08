@@ -4,7 +4,13 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "**",
+        hostname: "img.icons8.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "www.material-tailwind.com",
+        pathname: "/**",
       },
     ],
   },

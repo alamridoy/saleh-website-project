@@ -1,96 +1,52 @@
 "use client";
 
-import Image from "next/image";
 import React from "react";
-import { Typography, Carousel } from "@material-tailwind/react";
+import { Typography } from "@material-tailwind/react";
 
+const maps = [
+  {
+    id: 1,
+    src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14508.19718981668!2d91.66635339999999!3d24.621985749999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375111acf1e1c7d3%3A0x977e7f8221a84b1d!2sSrihatta%20Economic%20Zone!5e0!3m2!1sen!2sbd!4v1757328151199!5m2!1sen!2sbd",
+    title: "Srihatta Economic Zone",
+  },
+  // You can add more maps here if needed
+];
 
-export function CarouselFeatures() {
+export function MapSection() {
   return (
     <section className="px-8 pt-40 pb-20">
       <div className="flex mb-16 flex-col items-center">
-        <Typography variant="h2" className="text-center mb-2" color="blue-gray" placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
-          What Students Say
+        <Typography variant="h2" className="text-center mb-2" color="blue-gray"
+          {...({} as any)}>
+          Our Locations
         </Typography>
         <Typography
           variant="lead"
           className="mb-3 w-full text-center font-normal !text-gray-500 lg:w-10/12"
-          placeholder={undefined}
-          onResize={undefined}
-          onResizeCapture={undefined}
-          onPointerEnterCapture={undefined}
-          onPointerLeaveCapture={undefined}
+          {...({} as any)}
         >
-          Discover what our students have to say about our course!
+          Find our offices and locations on the map below.
         </Typography>
       </div>
-      <div className="container mx-auto !rounded-lg bg-[url('/image/Background.png')] bg-center py-10 lg:px-16">
-        <Carousel
-          transition={{ duration: 1 }}
-          nextArrow={() => <></>}
-          prevArrow={() => <></>}
-          navigation={({ setActiveIndex, activeIndex, length }) => (
-            <div className="absolute left-16 bottom-0 z-50 flex h-5 w-20 -translate-x-2/4 gap-2 md:left-2/4">
-              {new Array(length).fill("").map((_, i) => (
-                <span
-                  key={i}
-                  className={`block h-1 w-10 cursor-pointer transition-all content-[''] ${activeIndex === i ? "bg-white" : "bg-white/50"}`}
-                  onClick={() => setActiveIndex(i)} />
-              ))}
-            </div>
-          )} placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}        >
-          {new Array(2).fill("").map((_, i) => (
-            <div
-              key={i}
-              className="!relative flex grid-cols-1 flex-col-reverse gap-6 px-10 py-14 md:grid md:grid-cols-5  md:gap-14 md:py-20"
-            >
-              <div className="col-span-3 flex flex-col items-start justify-center">
-                <Typography
-                  variant="lead"
-                  color="white"
-                  className="mb-5 text-xl font-normal "
-                  placeholder={undefined}
-                  onResize={undefined}
-                  onResizeCapture={undefined}
-                  onPointerEnterCapture={undefined}
-                  onPointerLeaveCapture={undefined}
-                >
-                  Easy Shopping, Quick Delivery <br />
-                  No need to stress about shopping for books. Order online and
-                  have your textbooks and supplies delivered straight to your
-                  doorstep for free.
-                </Typography>
-                <Typography
-                    variant="small"
-                    color="white"
-                    className="font-medium uppercase"
-                    placeholder={undefined}
-                    onResize={undefined}
-                    onResizeCapture={undefined}
-                    onPointerEnterCapture={undefined}
-                    onPointerLeaveCapture={undefined}
-                  >
-                    Louis Miriam,{" "}
-                    <span className="font-normal opacity-60">
-                      Web Developer @ AMAZON INC.
-                    </span>
-                </Typography>
-              </div>
-              <div className="col-span-2 flex w-full shrink-0 md:!justify-end">
-                <Image
-                  width={256}
-                  height={256}
-                  src="/image/logos/logo-amazon 3.svg"
-                  alt="testimonial image"
-                  className="h-full w-2/4 object-contain md:!w-2/3"
-                />
-              </div>
-            </div>
-          ))}
-        </Carousel>
+
+      <div className="container mx-auto grid gap-10 lg:grid-cols-1">
+        {maps.map((map) => (
+          <div key={map.id} className="w-full h-[350px] rounded-lg overflow-hidden shadow-lg">
+            <iframe
+              src={map.src}
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title={map.title}
+            />
+          </div>
+        ))}
       </div>
     </section>
   );
 }
 
-export default CarouselFeatures;
+export default MapSection;

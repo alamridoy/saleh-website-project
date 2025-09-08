@@ -4,7 +4,6 @@ import {
   Collapse,
   IconButton,
   Typography,
-  Button,
 } from "@material-tailwind/react";
 import { XMarkIcon, Bars3Icon } from "@heroicons/react/24/solid";
 
@@ -12,6 +11,7 @@ interface NavItemProps {
   children: React.ReactNode;
   href?: string;
 }
+
 function NavItem({ children, href }: NavItemProps) {
   return (
     <li>
@@ -20,10 +20,12 @@ function NavItem({ children, href }: NavItemProps) {
         href={href || "#"}
         target={href ? "_blank" : "_self"}
         variant="small"
-        className="font-medium"
+        className={`relative font-medium text-lg lg:text-xl transition-colors duration-300 ${window.scrollY > 0 ? "text-gray-900" : "text-white"
+          } hover:text-blue-600`}
         {...({} as any)}
       >
         {children}
+        <span className="absolute left-0 -bottom-1 h-0.5 w-0 bg-blue-600 transition-all duration-300 group-hover:w-full" />
       </Typography>
     </li>
   );
@@ -36,144 +38,96 @@ export function Navbar() {
   const handleOpen = () => setOpen((cur) => !cur);
 
   React.useEffect(() => {
-    window.addEventListener(
-      "resize",
-      () => window.innerWidth >= 960 && setOpen(false)
-    );
+    const resizeListener = () => window.innerWidth >= 960 && setOpen(false);
+    window.addEventListener("resize", resizeListener);
+    return () => window.removeEventListener("resize", resizeListener);
   }, []);
 
   React.useEffect(() => {
-    function handleScroll() {
-      if (window.scrollY > 0) {
-        setIsScrolling(true);
-      } else {
-        setIsScrolling(false);
-      }
-    }
-
+    const handleScroll = () => setIsScrolling(window.scrollY > 0);
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const socialIcons = ["twitter", "facebook", "instagram"];
 
   return (
     <MTNavbar
       fullWidth
-      shadow={false}
+      shadow={isScrolling}
       blurred={false}
       color={isScrolling ? "white" : "transparent"}
-      className="fixed top-0 z-50 border-0"
+      className="fixed top-0 z-50 transition-all duration-300"
       {...({} as any)}
     >
-      <div className="container mx-auto flex items-center justify-between">
-        <Typography variant="h6" color={isScrolling ? "blue-gray" : "white"}
-        {...({} as any)}>
-          Material Tailwind
-        </Typography>
-        <ul
-          className={`ml-10 hidden items-center gap-6 lg:flex ${
-            isScrolling ? "text-gray-900" : "text-white"
-          }`}
+      <div className="container mx-auto flex items-center justify-between py-2 px-6">
+        {/* Logo with rounded white background */}
+        <div
+          className={`bg-white rounded-xl w-16 h-16 flex items-center justify-center transition-all duration-300 ${isScrolling ? "" : "bg-white"
+            }`}
         >
-          <NavItem>Home</NavItem>
-          <NavItem>About Us</NavItem>
-          <NavItem>Contact Us</NavItem>
-          <NavItem href="https://www.material-tailwind.com/docs/react/installation">
-            Docs
-          </NavItem>
-        </ul>
-        <div className="hidden gap-2 lg:flex">
-          <IconButton
-            variant="text"
-            color={isScrolling ? "gray" : "white"}
-            size="sm"
+          <img
+            src="/logos/storelogo.png"
+            alt="Store Logo"
+            className="h-14 w-auto"
             {...({} as any)}
-          >
-            <i className="fa-brands fa-twitter text-base" />
-          </IconButton>
-          <IconButton
-            variant="text"
-            color={isScrolling ? "gray" : "white"}
-            size="sm"
-            {...({} as any)}
-          >
-            <i className="fa-brands fa-facebook text-base" />
-          </IconButton>
-          <IconButton
-            variant="text"
-            color={isScrolling ? "gray" : "white"}
-            size="sm"
-            {...({} as any)}
-          >
-            <i className="fa-brands fa-instagram text-base" />
-          </IconButton>
-          <a href="https://www.material-tailwind.com/blocks" target="_blank">
-            <Button color={isScrolling ? "gray" : "white"} size="sm"
-            {...({} as any)}>
-              Blocks
-            </Button>
-          </a>
+          />
         </div>
-        <IconButton
-          variant="text"
-          color={isScrolling ? "gray" : "white"}
-          onClick={handleOpen}
-          className="ml-auto inline-block lg:hidden"
-          {...({} as any)}
-          
+
+
+        {/* Desktop Menu */}
+        <ul
+          className={`ml-8 hidden items-center gap-6 lg:flex transition-colors duration-300 ${isScrolling ? "text-gray-900" : "text-white"
+            }`}
         >
-          {open ? (
-            <XMarkIcon strokeWidth={2} className="h-6 w-6" />
-          ) : (
-            <Bars3Icon strokeWidth={2} className="h-6 w-6" />
-          )}
-        </IconButton>
-      </div>
-      <Collapse open={open}>
-        <div className="container mx-auto mt-4 rounded-lg bg-white px-6 py-5">
-          <ul className="flex flex-col gap-4 text-blue-gray-900">
-            <NavItem>Home</NavItem>
-            <NavItem>About Us</NavItem>
-            <NavItem>Contact Us</NavItem>
-            <NavItem href="https://www.material-tailwind.com/docs/react/installation">
-              Docs
-            </NavItem>
-            <NavItem href="https://www.material-tailwind.com/blocks">
-              Blocks
-            </NavItem>
-          </ul>
-          <div className="mt-4 flex gap-2">
-            <IconButton variant="text" color="gray" size="sm"
-            {...({} as any)}>
-              <i className="fa-brands fa-twitter text-base"
-              {...({} as any)}
-              />
-            </IconButton>
-            <IconButton variant="text" color="gray" size="sm"
-            {...({} as any)}>
-              <i className="fa-brands fa-facebook text-base"
-              {...({} as any)}
-              />
-            </IconButton>
-            <IconButton variant="text" color="gray" size="sm"
-            {...({} as any)}>
-              <i className="fa-brands fa-instagram text-base"
-              {...({} as any)}
-              />
-            </IconButton>
-            <IconButton variant="text" color="gray" size="sm"
-            {...({} as any)}>
-              <i className="fa-brands fa-facebook text-base"
-              {...({} as any)}
-              />
-            </IconButton>
-            <a href="https://www.material-tailwind.com/blocks" target="_blank">
-              <Button color="gray" size="sm" className="ml-auto"
-              {...({} as any)}
+          {["Home", "Services", "Products", "Contact Us"].map((item) => (
+            <NavItem key={item}>{item}</NavItem>
+          ))}
+        </ul>
+
+        {/* Social Icons & Mobile Menu */}
+        <div className="flex items-center gap-3">
+          <div className="hidden lg:flex gap-3">
+            {socialIcons.map((icon) => (
+              <IconButton
+                key={icon}
+                variant="text"
+                color={isScrolling ? "gray" : "white"}
+                size="sm"
+                className="hover:bg-blue-100 rounded-full transition"
+                {...({} as any)}
               >
-                Blocks
-              </Button>
-            </a>
+                <i className={`fa-brands fa-${icon} text-lg`} />
+              </IconButton>
+            ))}
+          </div>
+
+          <IconButton
+            variant="text"
+            color={isScrolling ? "gray" : "white"}
+            onClick={handleOpen}
+            className="ml-2 inline-block lg:hidden"
+            {...({} as any)}
+          >
+            {open ? <XMarkIcon strokeWidth={2} className="h-6 w-6" /> : <Bars3Icon strokeWidth={2} className="h-6 w-6" />}
+          </IconButton>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      <Collapse open={open}>
+        <div className="container mx-auto mt-4 rounded-lg bg-white px-6 py-5 shadow-md">
+          <ul className="flex flex-col gap-4 text-gray-900 text-lg">
+            {["Home", "Services", "Products", "Contact Us"].map((item) => (
+              <NavItem key={item}>{item}</NavItem>
+            ))}
+          </ul>
+          <div className="mt-4 flex gap-3">
+            {socialIcons.map((icon) => (
+              <IconButton key={icon} variant="text" color="gray" size="sm" {...({} as any)}>
+                <i className={`fa-brands fa-${icon} text-lg`} {...({} as any)} />
+              </IconButton>
+            ))}
           </div>
         </div>
       </Collapse>
