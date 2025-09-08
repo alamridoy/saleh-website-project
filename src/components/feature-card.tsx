@@ -7,6 +7,7 @@ interface FeatureCardProps {
   children: React.ReactNode;
 }
 
+
 export function FeatureCard({ icon: Icon, title, children }: FeatureCardProps) {
   return (
     <Card color="transparent" shadow={false} {...({} as any)}>
