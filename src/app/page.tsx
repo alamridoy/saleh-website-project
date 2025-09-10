@@ -2,24 +2,36 @@
 import { Navbar, Footer } from "@/components";
 
 // sections
-import Hero from "./hero";
-import OnlineCourse from "./online-course";
-import WhyChooseUs from "./why-choose-us";
-import CarouselFeatures from "./carousel-features";
+import Home from "./home";
+import Services from "./services";
+import Location from "./location";
 import Pricing from "./pricing";
-import OtherCourses from "./other-courses";
+import Contact from "./contactform";
 
 export default function Campaign() {
   return (
     <>
       <Navbar />
-      <Hero />
-      <OnlineCourse />
-      {/* <WhyChooseUs /> */}
-      <CarouselFeatures />
-      {/* <Pricing />
-      <OtherCourses /> */}
-      <Footer />
+
+      <div id="home">
+        <Home />
+      </div>
+
+      <div id="services">
+        <Services />
+      </div>
+
+      <div id="location">
+        <Location />
+      </div>
+
+      <div id="contact">
+        <Contact />
+      </div>
+
+      <div id="footer">
+        <Footer />
+      </div>
     </>
   );
 }
