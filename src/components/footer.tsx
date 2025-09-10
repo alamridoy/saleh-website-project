@@ -1,102 +1,178 @@
 "use client";
 
 import React from "react";
-import { Typography, Button, Input } from "@material-tailwind/react";
-
-const LINKS: { title: string; items: string[] }[] = [
-  {
-    title: "Company",
-    items: ["About Us", "Careers", "Premium Tools", "Blog"],
-  },
-  {
-    title: "Pages",
-    items: ["Login", "Register", "Add List", "Contact"],
-  },
-  {
-    title: "Legal",
-    items: ["Terms", "Privacy", "Team", "About Us"],
-  },
-];
+import { 
+  PhoneIcon, 
+  EnvelopeIcon, 
+  MapPinIcon, 
+  ClockIcon,
+  BuildingOfficeIcon,
+  GlobeAltIcon
+} from "@heroicons/react/24/outline";
 
 const CURRENT_YEAR = new Date().getFullYear();
 
+const CONTACT_INFO = {
+  shopName: "Saleha Mohammed Ahmed Trading Store",
+  subtitle: "Dish Installation in Khamis Mushait",
+  address: "Khamis Mushayt - Al Khalidiyah Thalathin Street - Opposite Al Khalidiyah Elementary School",
+  phone: "+966 55 820 2859",
+  email: "mdparvez.ahmed.509@gmail.com",
+  hours: "Saturday - Sunday: 12:00 AM - 11:59 PM"
+};
+
+const SERVICES = [
+  "Satellite Dish Installation",
+  "Digital Receiver Setup", 
+  "Cable Management",
+  "Signal Optimization",
+  "Technical Support",
+  "Maintenance Services"
+];
+
+const QUICK_LINKS = [
+  { name: "Home", href: "#home" },
+  { name: "Services", href: "#services" },
+  { name: "About", href: "#about" },
+  { name: "Contact", href: "#contact" }
+];
+
 export function Footer() {
   return (
-    <footer className="px-8 pt-24 pb-8">
-      <div className="container max-w-6xl flex flex-col mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-3 w-full">
-          {/* Links Section */}
-          <div className="flex col-span-2 items-center gap-10 mb-10 lg:mb-0 md:gap-36">
-            {LINKS.map(({ title, items }) => (
-              <ul key={title}>
-                <Typography variant="h6" color="blue-gray" className="mb-4" {...({} as any)}>
-                  {title}
-                </Typography>
-                {items.map((link) => (
-                  <li key={link}>
-                    <Typography
-                      as="a"
-                      href="#"
-                      className="py-1 font-normal text-gray-700 transition-colors hover:text-gray-900"
-                      {...({} as any)}
-                    >
-                      {link}
-                    </Typography>
-                  </li>
-                ))}
-              </ul>
-            ))}
+    <footer className="bg-white border-t-2 border-gray-100">
+      <div className="max-w-7xl mx-auto px-6 py-12">
+        
+        {/* Main Footer Content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          
+          {/* Company Information */}
+          <div className="lg:col-span-2">
+            <div className="mb-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-2 flex items-center gap-2">
+                <BuildingOfficeIcon className="w-6 h-6 text-blue-600" />
+                {CONTACT_INFO.shopName}
+              </h3>
+              <p className="text-gray-600 font-medium">
+                {CONTACT_INFO.subtitle}
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              {/* Address */}
+              <div className="flex items-start gap-3">
+                <MapPinIcon className="w-5 h-5 text-gray-500 mt-0.5 flex-shrink-0" />
+                <p className="text-gray-700 text-sm leading-relaxed">
+                  {CONTACT_INFO.address}
+                </p>
+              </div>
+
+              {/* Phone */}
+              <div className="flex items-center gap-3">
+                <PhoneIcon className="w-5 h-5 text-gray-500" />
+                <a 
+                  href={`tel:${CONTACT_INFO.phone}`}
+                  className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
+                >
+                  {CONTACT_INFO.phone}
+                </a>
+              </div>
+
+              {/* Email */}
+              <div className="flex items-center gap-3">
+                <EnvelopeIcon className="w-5 h-5 text-gray-500" />
+                <a 
+                  href={`mailto:${CONTACT_INFO.email}`}
+                  className="text-gray-700 hover:text-blue-600 transition-colors"
+                >
+                  {CONTACT_INFO.email}
+                </a>
+              </div>
+
+              {/* Hours */}
+              <div className="flex items-center gap-3">
+                <ClockIcon className="w-5 h-5 text-gray-500" />
+                <span className="text-gray-700 text-sm">
+                  {CONTACT_INFO.hours}
+                </span>
+              </div>
+            </div>
           </div>
 
-          {/* Subscribe Section */}
+          {/* Quick Links */}
           <div>
-            <Typography variant="h6" className="mb-3 text-left"
-            {...({} as any)}>
-              Subscribe
-            </Typography>
-            <Typography className="text-gray-500 font-normal mb-4 text-base"{...({} as any)}>
-              Get access to subscriber exclusive deals and be the first who gets
-              informed about fresh sales.
-            </Typography>
-            <Typography variant="small" className="font-medium mb-2 text-left"{...({} as any)}>
-              Your Email
-            </Typography>
-            <div className="flex mb-3 flex-col lg:flex-row items-start gap-4">
-              <div className="w-full">
-                <Input label="Email" color="gray" {...({} as any)} />
-                <Typography className="font-medium mt-3 text-sm text-gray-500 text-left"{...({} as any)}>
-                  I agree to the{" "}
-                  <a
-                    href="#"
-                    className="font-bold underline hover:text-gray-900 transition-colors"
+            <h4 className="font-semibold text-gray-900 mb-4">Quick Links</h4>
+            <ul className="space-y-2">
+              {QUICK_LINKS.map((link, index) => (
+                <li key={index}>
+                  <a 
+                    href={link.href}
+                    className="text-gray-600 hover:text-blue-600 transition-colors text-sm"
                   >
-                    Terms and Conditions
+                    {link.name}
                   </a>
-                </Typography>
-              </div>
-              <Button color="gray" className="w-full lg:w-fit" size="md"{...({} as any)}>
-                Subscribe
-              </Button>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Our Services */}
+          <div>
+            <h4 className="font-semibold text-gray-900 mb-4">Our Services</h4>
+            <ul className="space-y-2">
+              {SERVICES.map((service, index) => (
+                <li key={index} className="text-gray-600 text-sm">
+                  {service}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* Contact Call-to-Action */}
+        <div className="bg-blue-50 rounded-lg p-6 mb-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <div>
+              <h4 className="text-lg font-semibold text-gray-900 mb-1">
+                Ready to install your satellite dish?
+              </h4>
+              <p className="text-gray-600 text-sm">
+                Contact us today for professional installation services in Khamis Mushait
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <a
+                href={`tel:${CONTACT_INFO.phone}`}
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium text-center transition-colors"
+              >
+                Call Now
+              </a>
+              <a
+                href={`https://wa.me/966558202859`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium text-center transition-colors"
+              >
+                WhatsApp
+              </a>
             </div>
           </div>
         </div>
 
-        {/* Footer Note */}
-        <Typography
-          color="blue-gray"
-          className="md:text-center mt-16 font-normal text-gray-700"
-          {...({} as any)}
-        >
-          &copy; {CURRENT_YEAR} Made with{" "}
-          <a href="https://www.material-tailwind.com" target="_blank">
-            Material Tailwind
-          </a>{" "}
-          by{" "}
-          <a href="https://www.creative-tim.com" target="_blank">
-            Creative Tim
-          </a>
-          .
-        </Typography>
+        {/* Bottom Bar */}
+        <div className="border-t border-gray-200 pt-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <p className="text-gray-500 text-sm">
+              &copy; {CURRENT_YEAR} {CONTACT_INFO.shopName}. All rights reserved.
+            </p>
+            
+            <div className="flex items-center gap-4 text-sm text-gray-500">
+              <span className="flex items-center gap-1">
+                <GlobeAltIcon className="w-4 h-4" />
+                Saudi Arabia
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
   );

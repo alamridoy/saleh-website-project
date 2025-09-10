@@ -1,7 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
-import { Layout, FixedPlugin } from "@/components";
+import { Layout } from "@/components";
+import ClientComponents from "@/components/ClientComponents";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -10,9 +11,9 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "NextJS Tailwind Course Details Page",
+  title: "Saleha Mohammed Ahmed Trading Store",
   description:
-    "Introducing Tailwind Course Details Page, a comprehensive and user-friendly course details template designed using Tailwind CSS and Material Tailwind.",
+    "Introducing Saleha Mohammed Ahmed Trading Store, a comprehensive and user-friendly online store template designed using Tailwind CSS and Material Tailwind.",
 };
 
 export default function RootLayout({
@@ -33,8 +34,10 @@ export default function RootLayout({
       <body className={roboto.className}>
         <Layout>
           {children}
-          <FixedPlugin />
+          <ClientComponents /> {/* Safe rendering of ContactPlugin */}
         </Layout>
+
+        {/* Font Awesome */}
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"

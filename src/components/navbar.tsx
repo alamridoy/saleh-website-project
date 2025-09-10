@@ -1,183 +1,186 @@
-import React from "react";
-import {
-  Navbar as MTNavbar,
-  Collapse,
-  IconButton,
-  Typography,
-  Button,
-} from "@material-tailwind/react";
-import { XMarkIcon, Bars3Icon } from "@heroicons/react/24/solid";
+"use client";
+
+import React, { useState, useEffect } from "react";
+import { XMarkIcon, Bars3Icon } from "@heroicons/react/24/outline";
 
 interface NavItemProps {
   children: React.ReactNode;
   href?: string;
+  onClick?: () => void;
+  isScrolled: boolean;
 }
-function NavItem({ children, href }: NavItemProps) {
+
+function NavItem({ children, href, onClick, isScrolled }: NavItemProps) {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (href && href.startsWith("#")) {
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+    if (onClick) onClick();
+  };
+
   return (
-    <li>
-      <Typography
-        as="a"
+    <li className="relative group">
+      <a
         href={href || "#"}
-        target={href ? "_blank" : "_self"}
-        variant="small"
-        className="font-medium"
-        {...({} as any)}
+        onClick={handleClick}
+        className={`relative text-sm font-semibold tracking-wider uppercase transition-all duration-300 ease-out group-hover:scale-110 ${isScrolled
+            ? "text-gray-900 hover:text-blue-600"
+            : "text-white hover:text-cyan-300"
+          }`}
       >
         {children}
-      </Typography>
+        <span
+          className={`absolute -bottom-1 left-0 w-0 h-1 rounded-full transition-all duration-400 group-hover:w-full ${isScrolled
+              ? "bg-gradient-to-r from-blue-500 to-purple-500"
+              : "bg-gradient-to-r from-cyan-400 to-purple-400"
+            }`}
+        ></span>
+        <span
+          className={`absolute inset-0 opacity-0 group-hover:opacity-100 rounded-full blur-sm transition-opacity duration-400 ${isScrolled
+              ? "bg-gradient-to-r from-blue-400/20 to-purple-500/20"
+              : "bg-gradient-to-r from-cyan-400/20 to-purple-400/20"
+            }`}
+        ></span>
+      </a>
     </li>
   );
 }
 
 export function Navbar() {
-  const [open, setOpen] = React.useState(false);
-  const [isScrolling, setIsScrolling] = React.useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
-  const handleOpen = () => setOpen((cur) => !cur);
+  const toggleMenu = () => setIsOpen(!isOpen);
 
-  React.useEffect(() => {
-    window.addEventListener(
-      "resize",
-      () => window.innerWidth >= 960 && setOpen(false)
-    );
-  }, []);
-
-  React.useEffect(() => {
-    function handleScroll() {
-      if (window.scrollY > 0) {
-        setIsScrolling(true);
-      } else {
-        setIsScrolling(false);
-      }
-    }
-
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) setIsOpen(false);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const menuItems = [
+    { name: "Home", href: "#home" },
+    { name: "Services", href: "#services" },
+    { name: "Location", href: "#location" },
+    { name: "Contact", href: "#contact" },
+  ];
+
   return (
-    <MTNavbar
-      fullWidth
-      shadow={false}
-      blurred={false}
-      color={isScrolling ? "white" : "transparent"}
-      className="fixed top-0 z-50 border-0"
-      {...({} as any)}
+    <nav
+      className={`fixed top-0 w-full z-50 transition-all duration-700 ease-in-out ${isScrolled
+          ? "bg-white/95 shadow-[0_4px_30px_rgba(0,0,0,0.1)]"
+          : "bg-gradient-to-r from-gray-950/80 via-blue-950/80 to-purple-950/80 backdrop-blur-2xl"
+        } border-b border-gray-800/20`}
     >
-      <div className="container mx-auto flex items-center justify-between">
-        <Typography variant="h6" color={isScrolling ? "blue-gray" : "white"}
-        {...({} as any)}>
-          Material Tailwind
-        </Typography>
-        <ul
-          className={`ml-10 hidden items-center gap-6 lg:flex ${
-            isScrolling ? "text-gray-900" : "text-white"
-          }`}
-        >
-          <NavItem>Home</NavItem>
-          <NavItem>About Us</NavItem>
-          <NavItem>Contact Us</NavItem>
-          <NavItem href="https://www.material-tailwind.com/docs/react/installation">
-            Docs
-          </NavItem>
-        </ul>
-        <div className="hidden gap-2 lg:flex">
-          <IconButton
-            variant="text"
-            color={isScrolling ? "gray" : "white"}
-            size="sm"
-            {...({} as any)}
-          >
-            <i className="fa-brands fa-twitter text-base" />
-          </IconButton>
-          <IconButton
-            variant="text"
-            color={isScrolling ? "gray" : "white"}
-            size="sm"
-            {...({} as any)}
-          >
-            <i className="fa-brands fa-facebook text-base" />
-          </IconButton>
-          <IconButton
-            variant="text"
-            color={isScrolling ? "gray" : "white"}
-            size="sm"
-            {...({} as any)}
-          >
-            <i className="fa-brands fa-instagram text-base" />
-          </IconButton>
-          <a href="https://www.material-tailwind.com/blocks" target="_blank">
-            <Button color={isScrolling ? "gray" : "white"} size="sm"
-            {...({} as any)}>
-              Blocks
-            </Button>
-          </a>
-        </div>
-        <IconButton
-          variant="text"
-          color={isScrolling ? "gray" : "white"}
-          onClick={handleOpen}
-          className="ml-auto inline-block lg:hidden"
-          {...({} as any)}
-          
-        >
-          {open ? (
-            <XMarkIcon strokeWidth={2} className="h-6 w-6" />
-          ) : (
-            <Bars3Icon strokeWidth={2} className="h-6 w-6" />
-          )}
-        </IconButton>
-      </div>
-      <Collapse open={open}>
-        <div className="container mx-auto mt-4 rounded-lg bg-white px-6 py-5">
-          <ul className="flex flex-col gap-4 text-blue-gray-900">
-            <NavItem>Home</NavItem>
-            <NavItem>About Us</NavItem>
-            <NavItem>Contact Us</NavItem>
-            <NavItem href="https://www.material-tailwind.com/docs/react/installation">
-              Docs
-            </NavItem>
-            <NavItem href="https://www.material-tailwind.com/blocks">
-              Blocks
-            </NavItem>
-          </ul>
-          <div className="mt-4 flex gap-2">
-            <IconButton variant="text" color="gray" size="sm"
-            {...({} as any)}>
-              <i className="fa-brands fa-twitter text-base"
-              {...({} as any)}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <div className="flex items-center group relative">
+            <div className="relative p-2.5 rounded-2xl bg-white transition-all duration-500 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(139,92,246,0.3)]">
+              <img
+                src="/logos/storelogo.png"
+                alt="Store Logo"
+                className="h-9 w-9 object-contain filter drop-shadow-md"
               />
-            </IconButton>
-            <IconButton variant="text" color="gray" size="sm"
-            {...({} as any)}>
-              <i className="fa-brands fa-facebook text-base"
-              {...({} as any)}
-              />
-            </IconButton>
-            <IconButton variant="text" color="gray" size="sm"
-            {...({} as any)}>
-              <i className="fa-brands fa-instagram text-base"
-              {...({} as any)}
-              />
-            </IconButton>
-            <IconButton variant="text" color="gray" size="sm"
-            {...({} as any)}>
-              <i className="fa-brands fa-facebook text-base"
-              {...({} as any)}
-              />
-            </IconButton>
-            <a href="https://www.material-tailwind.com/blocks" target="_blank">
-              <Button color="gray" size="sm" className="ml-auto"
-              {...({} as any)}
+              <span className="absolute inset-0 rounded-2xl bg-gray-200/20 opacity-0 group-hover:opacity-30 transition-opacity duration-500"></span>
+            </div>
+          </div>
+
+          {/* Desktop Menu */}
+          <ul className="hidden md:flex items-center space-x-12">
+            {menuItems.map((item) => (
+              <NavItem key={item.name} href={item.href} isScrolled={isScrolled}>
+                {item.name}
+              </NavItem>
+            ))}
+            <li>
+              <a
+                href="tel:+966558202859"
+                className={`relative px-6 py-2.5 rounded-full font-semibold tracking-wide uppercase transition-all duration-400 hover:scale-105 hover:shadow-[0_0_25px_rgba(139,92,246,0.5)] ${isScrolled
+                    ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white"
+                    : "bg-gradient-to-r from-cyan-500 to-purple-500 text-white"
+                  }`}
               >
-                Blocks
-              </Button>
-            </a>
+                Call Now
+                <span className="absolute inset-0 rounded-full bg-white/20 opacity-0 hover:opacity-40 transition-opacity duration-400"></span>
+              </a>
+            </li>
+          </ul>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={toggleMenu}
+            className={`md:hidden p-2.5 rounded-xl transition-all duration-400 hover:scale-110 hover:shadow-[0_0_10px_rgba(139,92,246,0.3)] ${isScrolled
+                ? "bg-gray-100/50 hover:bg-gray-200/70"
+                : "bg-gray-900/50 hover:bg-gray-800/70"
+              }`}
+            aria-label="Toggle menu"
+          >
+            {isOpen ? (
+              <XMarkIcon
+                className={`h-7 w-7 ${isScrolled ? "text-gray-900" : "text-white"
+                  }`}
+              />
+            ) : (
+              <Bars3Icon
+                className={`h-7 w-7 ${isScrolled ? "text-gray-900" : "text-white"
+                  }`}
+              />
+            )}
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        <div
+          className={`md:hidden overflow-hidden transition-all duration-700 ease-in-out ${isOpen
+              ? "max-h-screen opacity-100 translate-y-0"
+              : "max-h-0 opacity-0 translate-y-[-20px]"
+            }`}
+        >
+          <div
+            className={`px-6 py-8 space-y-6 border-t shadow-xl ${isScrolled
+                ? "bg-white/95"
+                : "bg-gray-950/95 backdrop-blur-lg border-gray-800/70"
+              }`}
+          >
+            {menuItems.map((item) => (
+              <NavItem
+                key={item.name}
+                href={item.href}
+                onClick={() => setIsOpen(false)}
+                isScrolled={isScrolled}
+              >
+                {item.name}
+              </NavItem>
+            ))}
+            <div className="pt-4">
+              <a
+                href="tel:+966558202859"
+                className={`block w-full text-center px-6 py-3 rounded-full font-semibold tracking-wide uppercase transition-all duration-400 hover:scale-105 hover:shadow-[0_0_20px_rgba(139,92,246,0.5)] ${isScrolled
+                    ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white"
+                    : "bg-gradient-to-r from-cyan-500 to-purple-500 text-white"
+                  }`}
+                onClick={() => setIsOpen(false)}
+              >
+                Call Now
+              </a>
+            </div>
           </div>
         </div>
-      </Collapse>
-    </MTNavbar>
+      </div>
+    </nav>
   );
 }
 
