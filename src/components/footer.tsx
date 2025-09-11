@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import { 
-  PhoneIcon, 
-  EnvelopeIcon, 
-  MapPinIcon, 
+import {
+  PhoneIcon,
+  EnvelopeIcon,
+  MapPinIcon,
   ClockIcon,
   BuildingOfficeIcon,
   GlobeAltIcon
@@ -16,14 +16,15 @@ const CONTACT_INFO = {
   shopName: "Saleha Mohammed Ahmed Trading Store",
   subtitle: "Dish Installation in Khamis Mushait",
   address: "Khamis Mushayt - Al Khalidiyah Thalathin Street - Opposite Al Khalidiyah Elementary School",
-  phone: "+966 55 820 2859",
+  phone: ["+966558202859", "+966508805342"], // ✅ array of phone numbers
   email: "mdparvez.ahmed.509@gmail.com",
   hours: "Saturday - Sunday: 12:00 AM - 11:59 PM"
 };
 
+
 const SERVICES = [
   "Satellite Dish Installation",
-  "Digital Receiver Setup", 
+  "Digital Receiver Setup",
   "Cable Management",
   "Signal Optimization",
   "Technical Support",
@@ -41,10 +42,10 @@ export function Footer() {
   return (
     <footer className="bg-white border-t-2 border-gray-100">
       <div className="max-w-7xl mx-auto px-6 py-12">
-        
+
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-          
+
           {/* Company Information */}
           <div className="lg:col-span-2">
             <div className="mb-6">
@@ -66,21 +67,30 @@ export function Footer() {
                 </p>
               </div>
 
-              {/* Phone */}
+              {/* Phone Numbers */}
               <div className="flex items-center gap-3">
                 <PhoneIcon className="w-5 h-5 text-gray-500" />
-                <a 
-                  href={`tel:${CONTACT_INFO.phone}`}
-                  className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
-                >
-                  {CONTACT_INFO.phone}
-                </a>
+                <span className="text-gray-700 font-medium">
+                  {CONTACT_INFO.phone.map((num, idx) => (
+                    <React.Fragment key={idx}>
+                      <a
+                        href={`tel:${num}`}
+                        className="hover:text-blue-600 transition-colors"
+                      >
+                        {num}
+                      </a>
+                      {idx < CONTACT_INFO.phone.length - 1 && ", "}
+                    </React.Fragment>
+                  ))}
+                </span>
               </div>
+
+
 
               {/* Email */}
               <div className="flex items-center gap-3">
                 <EnvelopeIcon className="w-5 h-5 text-gray-500" />
-                <a 
+                <a
                   href={`mailto:${CONTACT_INFO.email}`}
                   className="text-gray-700 hover:text-blue-600 transition-colors"
                 >
@@ -104,7 +114,7 @@ export function Footer() {
             <ul className="space-y-2">
               {QUICK_LINKS.map((link, index) => (
                 <li key={index}>
-                  <a 
+                  <a
                     href={link.href}
                     className="text-gray-600 hover:text-blue-600 transition-colors text-sm"
                   >
@@ -164,7 +174,7 @@ export function Footer() {
             <p className="text-gray-500 text-sm">
               &copy; {CURRENT_YEAR} {CONTACT_INFO.shopName}. All rights reserved.
             </p>
-            
+
             <div className="flex items-center gap-4 text-sm text-gray-500">
               <span className="flex items-center gap-1">
                 <GlobeAltIcon className="w-4 h-4" />
