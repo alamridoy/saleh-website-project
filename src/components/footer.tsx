@@ -7,45 +7,43 @@ import {
   MapPinIcon,
   ClockIcon,
   BuildingOfficeIcon,
-  GlobeAltIcon
+  GlobeAltIcon,
 } from "@heroicons/react/24/outline";
 
 const CURRENT_YEAR = new Date().getFullYear();
 
 const CONTACT_INFO = {
-  shopName: "Saleha Mohammed Ahmed Trading Store",
-  subtitle: "Dish Installation in Khamis Mushait",
-  address: "Khamis Mushayt - Al Khalidiyah Thalathin Street - Opposite Al Khalidiyah Elementary School",
-  phone: ["+966558202859", "+966508805342"], // ✅ array of phone numbers
+  shopName: "محل صالحة محمد أحمد التجارية",
+  subtitle: "تركيب وصيانة الدش بخميس مشيط",
+  address:
+    "خميس مشيط - شارع الثلاثين - حي الخالدية - مقابل مدرسة الخالدية الابتدائية",
+  phone: ["+966558202859", "+966508805342"],
   email: "mdparvez.ahmed.509@gmail.com",
-  hours: "Saturday - Sunday: 12:00 AM - 11:59 PM"
+  hours: "نعمل طوال الأسبوع: 24 ساعة",
 };
 
-
 const SERVICES = [
-  "Satellite Dish Installation",
-  "Digital Receiver Setup",
-  "Cable Management",
-  "Signal Optimization",
-  "Technical Support",
-  "Maintenance Services"
+  "تركيب دش لجميع المنازل والشقق",
+  "صيانة أعطال وانقطاع إشارة الدش",
+  "بيع رسيفرات IPTV وHD وملحقاتها",
+  "تمديد وتركيب أسلاك دش عالية الجودة",
+  "فحص وضبط الإشارة باستخدام أجهزة حديثة",
+  "خدمات دعم فني وصيانة دورية",
 ];
 
 const QUICK_LINKS = [
-  { name: "Home", href: "#home" },
-  { name: "Services", href: "#services" },
-  { name: "About", href: "#about" },
-  { name: "Contact", href: "#contact" }
+  { name: "الرئيسية", href: "#home" },
+  { name: "خدماتنا", href: "#services" },
+  { name: "موقعنا", href: "#location" },
+  { name: "اتصل بنا", href: "#contact" },
 ];
 
 export function Footer() {
   return (
-    <footer className="bg-white border-t-2 border-gray-100">
+    <footer className="bg-white border-t-2 border-gray-100" dir="rtl">
       <div className="max-w-7xl mx-auto px-6 py-12">
-
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-
           {/* Company Information */}
           <div className="lg:col-span-2">
             <div className="mb-6">
@@ -53,9 +51,7 @@ export function Footer() {
                 <BuildingOfficeIcon className="w-6 h-6 text-blue-600" />
                 {CONTACT_INFO.shopName}
               </h3>
-              <p className="text-gray-600 font-medium">
-                {CONTACT_INFO.subtitle}
-              </p>
+              <p className="text-gray-600 font-medium">{CONTACT_INFO.subtitle}</p>
             </div>
 
             <div className="space-y-4">
@@ -79,13 +75,11 @@ export function Footer() {
                       >
                         {num}
                       </a>
-                      {idx < CONTACT_INFO.phone.length - 1 && ", "}
+                      {idx < CONTACT_INFO.phone.length - 1 && "، "}
                     </React.Fragment>
                   ))}
                 </span>
               </div>
-
-
 
               {/* Email */}
               <div className="flex items-center gap-3">
@@ -110,7 +104,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold text-gray-900 mb-4">Quick Links</h4>
+            <h4 className="font-semibold text-gray-900 mb-4">روابط سريعة</h4>
             <ul className="space-y-2">
               {QUICK_LINKS.map((link, index) => (
                 <li key={index}>
@@ -127,7 +121,7 @@ export function Footer() {
 
           {/* Our Services */}
           <div>
-            <h4 className="font-semibold text-gray-900 mb-4">Our Services</h4>
+            <h4 className="font-semibold text-gray-900 mb-4">خدماتنا</h4>
             <ul className="space-y-2">
               {SERVICES.map((service, index) => (
                 <li key={index} className="text-gray-600 text-sm">
@@ -143,18 +137,19 @@ export function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div>
               <h4 className="text-lg font-semibold text-gray-900 mb-1">
-                Ready to install your satellite dish?
+                هل تحتاج إلى تركيب أو صيانة دش بخميس مشيط؟
               </h4>
               <p className="text-gray-600 text-sm">
-                Contact us today for professional installation services in Khamis Mushait
+                تواصل معنا الآن للحصول على أفضل خدمة تركيب وصيانة دش مع فنيين
+                متخصصين
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3">
               <a
-                href={`tel:${CONTACT_INFO.phone}`}
+                href={`tel:${CONTACT_INFO.phone[0]}`}
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium text-center transition-colors"
               >
-                Call Now
+                اتصل الآن
               </a>
               <a
                 href={`https://wa.me/966558202859`}
@@ -162,7 +157,7 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium text-center transition-colors"
               >
-                WhatsApp
+                واتساب
               </a>
             </div>
           </div>
@@ -172,17 +167,24 @@ export function Footer() {
         <div className="border-t border-gray-200 pt-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-gray-500 text-sm">
-              &copy; {CURRENT_YEAR} {CONTACT_INFO.shopName}. All rights reserved.
+              &copy; {CURRENT_YEAR} {CONTACT_INFO.shopName} - جميع الحقوق محفوظة.
             </p>
 
             <div className="flex items-center gap-4 text-sm text-gray-500">
               <span className="flex items-center gap-1">
                 <GlobeAltIcon className="w-4 h-4" />
-                Saudi Arabia
+                المملكة العربية السعودية - خميس مشيط
               </span>
             </div>
           </div>
         </div>
+      </div>
+
+      {/* ✅ Hidden SEO Keywords */}
+      <div className="sr-only">
+        محل صالحة محمد أحمد التجارية يقدم خدمات تركيب وصيانة الدش بخميس مشيط،
+        تركيب دش لجميع أنواع المنازل والشقق، بيع رسيفرات IPTV وHD، تمديد أسلاك
+        دش عالية الجودة، وضبط إشارة الدش باستخدام أحدث الأجهزة.
       </div>
     </footer>
   );

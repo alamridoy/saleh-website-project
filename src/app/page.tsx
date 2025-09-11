@@ -5,7 +5,6 @@ import { Navbar, Footer } from "@/components";
 import Home from "./home";
 import Services from "./services";
 import Location from "./location";
-import Pricing from "./pricing";
 import Contact from "./contactform";
 
 export default function Campaign() {
@@ -13,25 +12,36 @@ export default function Campaign() {
     <>
       <Navbar />
 
-      <div id="home">
-        <Home />
-      </div>
+      <main>
+        <div id="home">
+          <Home />
+        </div>
 
-      <div id="services">
-        <Services />
-      </div>
+        <div id="services">
+          <Services />
+        </div>
 
-      <div id="location">
-        <Location />
-      </div>
+        <div id="location">
+          <Location />
+        </div>
 
-      <div id="contact">
-        <Contact />
-      </div>
+        <div id="contact">
+          <Contact />
+        </div>
+      </main>
 
-      <div id="footer">
-        <Footer />
-      </div>
+      <Footer />
+
+      {/* ✅ Hidden SEO for services */}
+      <section className="sr-only">
+        <h2>أعمال وخدماتنا</h2>
+        <p>
+          نقدم أفضل خدمات تركيب وصيانة الدش بخميس مشيط. فريقنا متخصص في تركيب
+          دش لجميع المنازل والشقق، إصلاح أعطال وانقطاع الإشارة، بيع رسيفرات IPTV
+          وHD وملحقاتها، بالإضافة إلى تمديد أسلاك دش عالية الجودة وضبط الإشارة
+          بأحدث الأجهزة.
+        </p>
+      </section>
     </>
   );
 }
