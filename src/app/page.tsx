@@ -6,6 +6,12 @@ import Home from "./home";
 import Services from "./services";
 import Location from "./location";
 import Contact from "./contactform";
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "الرئيسية | فني دش خميس مشيط - Dish Installation Khamis Mushait",
+  description:
+    "تركيب دش بخميس مشيط مع فنيين متخصصين. نقدم خدمات تركيب وصيانة دش لجميع المنازل والشقق. | Dish installation & repair in Khamis Mushait.",
+};
 
 export default function Campaign() {
   return (

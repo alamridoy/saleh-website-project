@@ -20,16 +20,21 @@ const Hero: React.FC = () => {
 
           {/* ✅ Main SEO H1 */}
           <h1 className="text-white text-3xl md:text-5xl lg:text-6xl font-bold text-center leading-snug">
-            فني دش بخميس مشيط – محل صالحة محمد أحمد التجارية
+            شركة دش خميس مشيط
+            تركيب دش ابها خميس
+            تركيب دش خميس مشيط وابها
           </h1>
 
           {/* ✅ Supporting keywords in visible text */}
           <p className="text-white mt-6 mb-10 w-full md:max-w-full lg:max-w-3xl text-center leading-relaxed">
-            نقدم خدمات{" "}
-            <strong>تركيب وصيانة الدش بخميس مشيط</strong> لجميع المنازل والشقق
-            مع <strong>فني دش محترف</strong> مجهز بأحدث أجهزة فحص وضبط الإشارة.
-            نوفر أيضًا <strong>رسيفرات IPTV وHD</strong>، أسلاك عالية الجودة،
-            وحلول متكاملة لحل جميع مشاكل انقطاع الإشارة بسرعة وكفاءة.
+            محل تركيب دش خميس مشيط
+            فني دش خميس مشيط
+            محل رسيفرات خميس مشيط
+            تركيب صحن خميس مشيط
+            محل رسيفرات قريب مني
+            شركة دش خميس مشيط
+            تركيب دش ابها خميس
+            تركيب دش خميس مشيط وابها
           </p>
 
           {/* ✅ Call-to-Action */}

@@ -11,17 +11,46 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "محل صالحة محمد أحمد التجارية | تركيب وصيانة دش خميس مشيط",
+  title: "فني دش خميس مشيط | Dish Installation & Repair in Khamis Mushait",
   description:
-    "محل صالحة محمد أحمد التجارية متخصص في تركيب وصيانة الدش بخميس مشيط. خدماتنا تشمل تركيب دش لجميع المنازل والشقق، صيانة أعطال وانقطاع الإشارة، بيع رسيفرات IPTV وHD، تمديد أسلاك دش عالية الجودة وضبط الإشارة بأحدث الأجهزة.",
+    "فني دش خميس مشيط متخصص في تركيب وصيانة الدش بجميع أنواعه. محل صالحة محمد أحمد التجارية يقدم أفضل خدمات تركيب دش، صيانة رسيفرات، بيع IPTV و HD في خميس مشيط. | Professional dish installation and repair in Khamis Mushait.",
   keywords: [
     "فني دش خميس مشيط",
     "تركيب دش خميس مشيط",
     "صيانة دش خميس مشيط",
-    "رسيفرات IPTV خميس مشيط",
     "محل دش خميس مشيط",
-    "خدمات تركيب وصيانة دش",
+    "محلات دش خميس مشيط",
+    "رسيفرات IPTV خميس مشيط",
+    "dish installation Khamis Mushait",
+    "satellite repair Khamis Mushait",
   ],
+  openGraph: {
+    title: "فني دش خميس مشيط | Dish Installation Khamis Mushait",
+    description:
+      "أفضل خدمة تركيب وصيانة دش في خميس مشيط مع محل صالحة محمد أحمد التجارية. Expert dish installation & repair in Khamis Mushait.",
+    url: "https://dishinstallationsaleha.com/",
+    siteName: "محل صالحة محمد أحمد التجارية",
+    images: [
+      {
+        url: "https://dishinstallationsaleha.com/image/dish.jpg",
+        width: 1200,
+        height: 630,
+        alt: "فني دش خميس مشيط | Dish Installation Khamis Mushait",
+      },
+    ],
+    locale: "ar_SA",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "فني دش خميس مشيط | Dish Installation Khamis Mushait",
+    description:
+      "تركيب وصيانة دش بخميس مشيط مع فنيين متخصصين. Professional dish installation in Khamis Mushait.",
+    images: ["https://dishinstallationsaleha.com/image/dish.jpg"],
+  },
+  alternates: {
+    canonical: "https://dishinstallationsaleha.com/",
+  },
 };
 
 export default function RootLayout({
