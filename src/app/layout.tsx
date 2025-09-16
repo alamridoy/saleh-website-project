@@ -11,23 +11,29 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "فني دش خميس مشيط | Dish Installation & Repair in Khamis Mushait",
+  title:
+    "فني دش خميس مشيط | تركيب وصيانة دش مركزي وعادي | رسيفرات IPTV وHD | محل دش خميس مشيط",
   description:
-    "فني دش خميس مشيط متخصص في تركيب وصيانة الدش بجميع أنواعه. محل صالحة محمد أحمد التجارية يقدم أفضل خدمات تركيب دش، صيانة رسيفرات، بيع IPTV و HD في خميس مشيط. | Professional dish installation and repair in Khamis Mushait.",
+    "فني دش خميس مشيط يقدم أفضل خدمات تركيب وصيانة الدش المركزي والعادي. محل صالحة محمد أحمد التجارية يوفر تركيب دش، صيانة أعطال، بيع رسيفرات IPTV وHD، وتمديد أسلاك بجودة عالية في خميس مشيط. اتصل الآن 0558202859.",
   keywords: [
     "فني دش خميس مشيط",
     "تركيب دش خميس مشيط",
     "صيانة دش خميس مشيط",
     "محل دش خميس مشيط",
     "محلات دش خميس مشيط",
+    "محل تركيب دش خميس مشيط",
+    "محل صيانة دش خميس مشيط",
     "رسيفرات IPTV خميس مشيط",
-    "dish installation Khamis Mushait",
-    "satellite repair Khamis Mushait",
+    "رسيفرات HD خميس مشيط",
+    "فني دش قريب مني خميس مشيط",
+    "satellite installation Khamis Mushait",
+    "dish repair Khamis Mushait",
   ],
   openGraph: {
-    title: "فني دش خميس مشيط | Dish Installation Khamis Mushait",
+    title:
+      "فني دش خميس مشيط | تركيب دش مركزي وصيانة رسيفرات IPTV وHD | محل دش خميس مشيط",
     description:
-      "أفضل خدمة تركيب وصيانة دش في خميس مشيط مع محل صالحة محمد أحمد التجارية. Expert dish installation & repair in Khamis Mushait.",
+      "أفضل فني دش في خميس مشيط مع خدمات تركيب وصيانة الدش المركزي والعادي. محل صالحة محمد أحمد التجارية يوفر بيع رسيفرات IPTV وHD، وتمديد أسلاك دش عالية الجودة.",
     url: "https://dishinstallationsaleha.com/",
     siteName: "محل صالحة محمد أحمد التجارية",
     images: [
@@ -43,9 +49,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "فني دش خميس مشيط | Dish Installation Khamis Mushait",
+    title: "فني دش خميس مشيط | تركيب دش مركزي وصيانة رسيفرات IPTV وHD",
     description:
-      "تركيب وصيانة دش بخميس مشيط مع فنيين متخصصين. Professional dish installation in Khamis Mushait.",
+      "تركيب وصيانة دش بخميس مشيط مع فنيين متخصصين. بيع رسيفرات IPTV وHD مع محل صالحة محمد أحمد التجارية.",
     images: ["https://dishinstallationsaleha.com/image/dish.jpg"],
   },
   alternates: {
@@ -78,27 +84,39 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              "name": "محل صالحة محمد أحمد التجارية",
-              "image": "https://dishinstallationsaleha.com/logos/storelogo.png",
-              "description":
-                "تركيب وصيانة دش في خميس مشيط. تركيب دش لجميع أنواع المنازل والشقق، صيانة أعطال، بيع رسيفرات IPTV وHD، تمديد أسلاك دش عالية الجودة، وضبط الإشارة.",
-              "telephone": "+966558202859",
-              "address": {
+              name: "محل صالحة محمد أحمد التجارية",
+              image:
+                "https://dishinstallationsaleha.com/logos/storelogo.png",
+              description:
+                "فني دش خميس مشيط يقدم خدمات تركيب دش، صيانة أعطال، بيع رسيفرات IPTV وHD، وتمديد أسلاك عالية الجودة. تغطي خدماتنا جميع أحياء خميس مشيط.",
+              telephone: "+966558202859",
+              address: {
                 "@type": "PostalAddress",
-                "addressLocality": "خميس مشيط",
-                "addressCountry": "SA",
+                addressLocality: "خميس مشيط",
+                addressCountry: "SA",
               },
-              "openingHours": "Mo-Su 08:00-23:00",
-              "areaServed": "خميس مشيط",
-              "serviceType": [
-                "تركيب دش",
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: 18.3,
+                longitude: 42.7,
+              },
+              openingHours: "Mo-Su 08:00-23:00",
+              areaServed: "خميس مشيط",
+              serviceType: [
+                "تركيب دش مركزي",
                 "صيانة دش",
                 "بيع رسيفرات IPTV",
                 "بيع رسيفرات HD",
                 "تمديد أسلاك دش",
-                "ضبط إشارة الدش",
+                "ضبط إشارة",
               ],
-              "url": "https://dishinstallationsaleha.com",
+              priceRange: "SAR 100-500",
+              url: "https://dishinstallationsaleha.com",
+              sameAs: [
+                "https://www.facebook.com/yourpage",
+                "https://www.instagram.com/yourpage",
+                "https://www.twitter.com/yourpage",
+              ],
             }),
           }}
         />
@@ -107,13 +125,21 @@ export default function RootLayout({
         <Layout>
           {/* ✅ Hidden SEO-friendly section */}
           <section className="sr-only">
-            <h2>خدمات محل صالحة محمد أحمد التجارية</h2>
+            <h2>خدمات تركيب وصيانة الدش في خميس مشيط</h2>
+            <p>
+              نقدم أفضل خدمات تركيب وصيانة الدش بخميس مشيط. يشمل ذلك تركيب دش
+              مركزي وعادي، صيانة أعطال انقطاع الإشارة، بيع رسيفرات IPTV وHD،
+              تركيب أسلاك دش عالية الجودة، وضبط الإشارة بدقة. إذا كنت تبحث عن{" "}
+              <strong>فني دش قريب منك</strong> أو{" "}
+              <strong>محل دش خميس مشيط</strong> فنحن الخيار الأمثل.
+            </p>
             <ul>
               <li>تركيب دش لجميع أنواع المنازل والشقق بخميس مشيط</li>
-              <li>صيانة الأعطال وحل مشاكل انقطاع الإشارة</li>
+              <li>صيانة أعطال ورسيفرات بجميع أنواعها</li>
               <li>بيع رسيفرات IPTV وHD وملحقاتها</li>
               <li>تمديد وتركيب أسلاك دش عالية الجودة</li>
               <li>فحص وضبط الإشارة باستخدام أجهزة حديثة</li>
+              <li>محلات دش وخدمات سريعة في جميع أحياء خميس مشيط</li>
             </ul>
           </section>
 
