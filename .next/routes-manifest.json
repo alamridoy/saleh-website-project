@@ -31,6 +31,54 @@
       "regex": "^/_not\\-found(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/services/service1",
+      "regex": "^/services/service1(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/service1(?:/)?$"
+    },
+    {
+      "page": "/services/service2",
+      "regex": "^/services/service2(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/service2(?:/)?$"
+    },
+    {
+      "page": "/services/service3",
+      "regex": "^/services/service3(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/service3(?:/)?$"
+    },
+    {
+      "page": "/services/service4",
+      "regex": "^/services/service4(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/service4(?:/)?$"
+    },
+    {
+      "page": "/services/service5",
+      "regex": "^/services/service5(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/service5(?:/)?$"
+    },
+    {
+      "page": "/services/service6",
+      "regex": "^/services/service6(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/service6(?:/)?$"
+    },
+    {
+      "page": "/services/service7",
+      "regex": "^/services/service7(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/service7(?:/)?$"
+    },
+    {
+      "page": "/services/service8",
+      "regex": "^/services/service8(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/service8(?:/)?$"
     }
   ],
   "dataRoutes": [],

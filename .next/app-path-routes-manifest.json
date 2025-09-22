@@ -1,4 +1,12 @@
 {
   "/_not-found/page": "/_not-found",
+  "/services/service1/page": "/services/service1",
+  "/services/service2/page": "/services/service2",
+  "/services/service5/page": "/services/service5",
+  "/services/service3/page": "/services/service3",
+  "/services/service4/page": "/services/service4",
+  "/services/service6/page": "/services/service6",
+  "/services/service7/page": "/services/service7",
+  "/services/service8/page": "/services/service8",
   "/page": "/"
 }

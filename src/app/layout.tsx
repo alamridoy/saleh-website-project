@@ -12,7 +12,7 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   title:
-    "فني دش خميس مشيط | تركيب وصيانة دش مركزي وعادي | رسيفرات IPTV وHD | محل دش خميس مشيط",
+    "تركيب دش ابها خميس  0558202859-فني تركيب دش وشاشات خميس وابها - ترند السعودية-تركيب دش مركزي خميس مشيط",
   description:
     "فني دش خميس مشيط يقدم خدمات تركيب وصيانة الدش المركزي والعادي. محل صالحة محمد أحمد التجارية يوفر تركيب دش، صيانة أعطال، بيع رسيفرات IPTV وHD، وتمديد أسلاك بجودة عالية في خميس مشيط. اتصل الآن 0558202859.",
   keywords: [
@@ -154,7 +154,7 @@ export default function RootLayout({
         ></script>
 
         {/* Favicon */}
-        <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+       <link rel="shortcut icon" href="/logos/storelogo.png" type="image/png" />
 
         {/* JSON-LD LocalBusiness + Services */}
         <script
