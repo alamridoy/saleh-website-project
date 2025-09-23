@@ -94,14 +94,13 @@ export function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center group relative">
-            <div className="relative p-2.5 rounded-2xl bg-white transition-all duration-500 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(139,92,246,0.3)]">
-              <img
-                src="/logos/storelogo.png"
-                alt="شعار محل صالحة محمد أحمد التجارية"
-                className="h-9 w-9 object-contain filter drop-shadow-md"
-              />
-            </div>
+            <img
+              src="/logos/storelogo.png"
+              alt="شعار محل صالحة محمد أحمد التجارية"
+              className="h-16 w-16 object-contain rounded-xl shadow-md transition-all duration-500 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(139,92,246,0.4)]"
+            />
           </div>
+
 
           {/* Desktop Menu */}
           <ul className="hidden md:flex items-center space-x-12 space-x-reverse">

@@ -1,12 +1,3 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
-  "/services/service1/page": "app/services/service1/page.js",
-  "/services/service2/page": "app/services/service2/page.js",
-  "/services/service5/page": "app/services/service5/page.js",
-  "/services/service3/page": "app/services/service3/page.js",
-  "/services/service4/page": "app/services/service4/page.js",
-  "/services/service6/page": "app/services/service6/page.js",
-  "/services/service7/page": "app/services/service7/page.js",
-  "/services/service8/page": "app/services/service8/page.js",
   "/page": "app/page.js"
 }
