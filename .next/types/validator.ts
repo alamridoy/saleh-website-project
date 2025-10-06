@@ -42,34 +42,34 @@ type LayoutConfig<Route extends LayoutRoutes = LayoutRoutes> = {
   handler satisfies AppPageConfig<"/">
 }
 
-// Validate ../src/app/services/service1/page.tsx
+// Validate ../src/app/services/centraldish/page.tsx
 {
-  const handler = {} as typeof import("../src/app/services/service1/page.js")
-  handler satisfies AppPageConfig<"/services/service1">
+  const handler = {} as typeof import("../src/app/services/centraldish/page.js")
+  handler satisfies AppPageConfig<"/services/centraldish">
 }
 
-// Validate ../src/app/services/service2/page.tsx
+// Validate ../src/app/services/customersupport/page.tsx
 {
-  const handler = {} as typeof import("../src/app/services/service2/page.js")
-  handler satisfies AppPageConfig<"/services/service2">
+  const handler = {} as typeof import("../src/app/services/customersupport/page.js")
+  handler satisfies AppPageConfig<"/services/customersupport">
 }
 
-// Validate ../src/app/services/service3/page.tsx
+// Validate ../src/app/services/dishmaintenance/page.tsx
 {
-  const handler = {} as typeof import("../src/app/services/service3/page.js")
-  handler satisfies AppPageConfig<"/services/service3">
+  const handler = {} as typeof import("../src/app/services/dishmaintenance/page.js")
+  handler satisfies AppPageConfig<"/services/dishmaintenance">
 }
 
-// Validate ../src/app/services/service4/page.tsx
+// Validate ../src/app/services/dishrepair/page.tsx
 {
-  const handler = {} as typeof import("../src/app/services/service4/page.js")
-  handler satisfies AppPageConfig<"/services/service4">
+  const handler = {} as typeof import("../src/app/services/dishrepair/page.js")
+  handler satisfies AppPageConfig<"/services/dishrepair">
 }
 
-// Validate ../src/app/services/service8/page.tsx
+// Validate ../src/app/services/installation/page.tsx
 {
-  const handler = {} as typeof import("../src/app/services/service8/page.js")
-  handler satisfies AppPageConfig<"/services/service8">
+  const handler = {} as typeof import("../src/app/services/installation/page.js")
+  handler satisfies AppPageConfig<"/services/installation">
 }
 
 

@@ -68,11 +68,11 @@ export function Navbar() {
     {
       name: "خدمات تركيب وصيانة الدش",
       dropdown: [
-        { name: "تركيب صحون مركزية", href: "service1" },
-        { name: "صيانة الأطباق", href: "service2" },
-        { name: "إصلاح الأطباق", href: "service3" },
-        { name: "بيع وتركيب أجهزة الاستقبال", href: "service4" },
-        { name: "دعم ومساعدة العملاء", href: "service8" },
+        { name: "تركيب صحون مركزية", href: "centraldish" },
+        { name: "صيانة الأطباق", href: "dishmaintenance" },
+        { name: "إصلاح الأطباق", href: "dishrepair" },
+        { name: "بيع وتركيب أجهزة الاستقبال", href: "installation" },
+        { name: "دعم ومساعدة العملاء", href: "customersupport" },
       ],
     },
     { name: "مناطق التغطية بخميس مشيط", href: "#location" },
