@@ -4,7 +4,8 @@ import { Footer } from "@/components";
 export default function Service1Page() {
   const service = {
     title: "شركة تركيب الدش المركزي والعادي في خميس مشيط، المملكة العربية السعودية",
-    subtitle: "أفضل شركة لتركيب الدش الفضائي 📞 +966 558202859 في خميس مشيط",
+    subtitle: "أفضل شركة لتركيب الدش الفضائي في خميس مشيط",
+
     image: "/image/services/one.jpg",
     details: "تشمل خدمتنا تركيب وصيانة الدش المركزي مع ضبط الإشارة، تحسين الجودة، تركيب أنظمة الصوت، وتنفيذ التمديدات السليمة للكابلات. نقدم خدماتنا للمنازل، الشركات، والمصانع.",
     features: [
@@ -82,7 +83,7 @@ export default function Service1Page() {
           />
         </div>
       </section>
-
+      {/* Service Highlights Section */}
       <section className="bg-white py-16 px-6">
         <div className="max-w-5xl mx-auto space-y-8 text-gray-800 leading-relaxed">
           <h2 className="text-2xl font-bold text-center mb-8">
@@ -96,7 +97,10 @@ export default function Service1Page() {
               وتركيب أنظمة الصوت، وتنفيذ التمديدات السليمة للكابلات. في خميس مشيط، نقدم
               أفضل خدمات تركيب وصيانة الدش.
             </p>
-            <p className="mt-2 font-bold text-blue-600">📞 +966 558202859 — خميس مشيط</p>
+            <p className="mt-2 font-bold text-blue-600">
+              📞 <span dir="ltr">+966 558202859</span> — خميس مشيط
+            </p>
+
           </div>
 
           <div>
@@ -105,7 +109,10 @@ export default function Service1Page() {
               يتميز فنيو شركتنا بالخبرة في تركيب أطباق الدش وضبطها ومعايرة الإشارة لضمان
               استقبال قنوات فضائية بجودة عالية.
             </p>
-            <p className="mt-2 font-bold text-blue-600">📞 +966 558202859 — خميس مشيط</p>
+            <p className="mt-2 font-bold text-blue-600">
+              📞 <span dir="ltr">+966 558202859</span> — خميس مشيط
+            </p>
+
           </div>
 
           <div>
@@ -114,7 +121,10 @@ export default function Service1Page() {
               نقدم خدمات تركيب الدش بأسعار تنافسية تناسب ميزانيتك، مع ضمان الخدمة لضمان رضا
               العملاء. يمكنك أيضًا الحصول على عروض أسعار من فنيينا للمقارنة واختيار الأنسب لك.
             </p>
-            <p className="mt-2 font-bold text-blue-600">📞 +966 558202859 — خميس مشيط</p>
+            <p className="mt-2 font-bold text-blue-600">
+              📞 <span dir="ltr">+966 558202859</span> — خميس مشيط
+            </p>
+
           </div>
         </div>
       </section>

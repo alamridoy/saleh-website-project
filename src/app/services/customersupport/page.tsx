@@ -65,6 +65,7 @@ export default function Service5Page() {
       </section>
 
       {/* Customer Support Section */}
+      {/* Customer Support Section */}
       <section className="bg-white py-16 px-6">
         <div className="max-w-5xl mx-auto space-y-8 text-gray-800 leading-relaxed">
           <h2 className="text-2xl font-bold text-center mb-8">دعم العملاء والمساعدة</h2>
@@ -105,103 +106,83 @@ export default function Service5Page() {
           </div>
         </div>
       </section>
+
       <section className="bg-white py-16 px-6">
-      <div className="max-w-5xl mx-auto text-gray-800 leading-relaxed space-y-8" dir="rtl">
-        
-        {/* Technician Section */}
-        <div>
-          <h3 className="text-xl font-bold mb-2">🔹 فني تركيب وصيانة الدش في خميس مشيط</h3>
-          <p className="mb-2">
-            يمكن لسكان خميس مشيط الاعتماد على فنيين ماهرين في تركيب وصيانة الدش لتقديم مجموعة كاملة من الخدمات. نحن نقوم بتركيب الأطباق، وضبط الترددات، وصيانة أنظمة الأقمار الصناعية مع ضمان استقبال إشارة عالي الجودة. يتمتع فنيونا بخبرة في التعامل مع مختلف أنواع الأطباق وأجهزة الاستقبال، مما يضمن خدمة موثوقة في جميع الأحياء.
-          </p>
-          <p>
-            Khamis Mushait residents can rely on skilled dish installation and maintenance technicians for a full range of services. We install, adjust frequencies, and maintain satellite systems while ensuring high-quality signal reception. Our technicians are experienced with different types of satellite dishes and receivers, providing reliable service across all neighborhoods.
-          </p>
+        <div className="max-w-5xl mx-auto text-gray-800 leading-relaxed space-y-8" dir="rtl">
+
+          {/* Technician Section */}
+          <div>
+            <h3 className="text-xl font-bold mb-2">🔹 فني تركيب وصيانة الدش في خميس مشيط</h3>
+            <p className="mb-2">
+              يمكن لسكان خميس مشيط الاعتماد على فنيين ماهرين في تركيب وصيانة الدش لتقديم مجموعة كاملة من الخدمات. نحن نقوم بتركيب الأطباق، وضبط الترددات، وصيانة أنظمة الأقمار الصناعية مع ضمان استقبال إشارة عالي الجودة. يتمتع فنيونا بخبرة في التعامل مع مختلف أنواع الأطباق وأجهزة الاستقبال، مما يضمن خدمة موثوقة في جميع الأحياء.
+            </p>
+          </div>
+
+          {/* Maintenance Tips */}
+          <div>
+            <h3 className="text-xl font-bold mb-2">🔹 نصائح لصيانة الدش</h3>
+            <ul className="list-disc list-inside space-y-2 text-gray-700">
+              <li>تحقق دائمًا من محاذاة طبق الدش بانتظام للحفاظ على قوة الإشارة.</li>
+              <li>حافظ على نظافة الطبق والكابلات من الغبار والأوساخ والحطام.</li>
+              <li>افحص التوصيلات والكابلات للتأكد من عدم وجود تآكل أو تلف كل بضعة أشهر.</li>
+              <li>تجنب تركيب الأطباق بالقرب من العوائق مثل الأشجار الطويلة أو الأعمدة المعدنية.</li>
+              <li>ثبت قاعدة الطبق بإحكام لمنع تحركه أثناء الرياح القوية.</li>
+              <li>اختبر جودة الإشارة بعد العواصف أو الأمطار الغزيرة لضمان استقبال مستمر.</li>
+              <li>حدّث برنامج جهاز الاستقبال عند الحاجة للحصول على أفضل أداء.</li>
+            </ul>
+          </div>
+
+          {/* Why Choose Company */}
+          <div>
+            <h3 className="text-xl font-bold mb-2">🔹 لماذا تختار شركة لتركيب وصيانة الدش في خميس مشيط؟</h3>
+            <p>فنيون محترفون لديهم سنوات من الخبرة العملية.</p>
+            <p>خدمات موثوقة للمنازل والأماكن التجارية والمرافق الصناعية.</p>
+            <p>استجابة سريعة وتواصل فعال لطلبات التركيب أو الصيانة.</p>
+            <p>أسعار مناسبة وشفافة بدون رسوم خفية.</p>
+            <p>ضمان جودة لتوفير إشارة فضائية مستقرة وواضحة.</p>
+            <p>الوصول إلى أحدث الأدوات والمعدات للتركيب وضبط الإعدادات.</p>
+            <p>خدمات مخصصة تتناسب مع مختلف الأحياء واحتياجات العملاء.</p>
+          </div>
+
+          {/* How to Find */}
+          <div>
+            <h3 className="text-xl font-bold mb-2">🔹 كيفية العثور على أفضل فني لتركيب وصيانة الدش المركزي في خميس مشيط</h3>
+            <ol className="list-decimal list-inside space-y-3">
+              <li>
+                <strong>البحث عبر الإنترنت:</strong> استخدم محركات البحث للعثور على فنيين متخصصين في تركيب وصيانة الدش المركزي في خميس مشيط. قم بزيارة مواقع الشركات للاطلاع على أنواع الخدمات التي يقدمونها.
+              </li>
+              <li>
+                <strong>التوصيات:</strong> اسأل الأصدقاء والعائلة الذين سبق لهم استخدام فنيين محترفين. استفد من تجاربهم لاختيار أفضل فني ماهر وموثوق.
+              </li>
+              <li>
+                <strong>التواصل المباشر:</strong> تواصل مع الفنيين المحتملين للاستفسار عن الخدمات والأسعار. حدد وقتًا مناسبًا للتركيب أو الصيانة وفقًا لاحتياجاتك.
+              </li>
+            </ol>
+          </div>
+
+          {/* Types of Services */}
+          <div>
+            <h3 className="text-xl font-bold mb-2">🔹 تركيب وصيانة الدش في خميس مشيط</h3>
+            <p>نقدّم مجموعة واسعة من الحلول المصممة وفقًا لاحتياجات كل عميل. خدمات تركيب الدش في خميس مشيط متوفرة للمنازل والأعمال التجارية على حد سواء.</p>
+            <ol className="list-decimal list-inside space-y-2 mt-3">
+              <li>
+                <strong>تركيب وصيانة الدش المركزي للمنازل:</strong> نقدم تركيبًا دقيقًا لأطباق الدش المركزي للمنازل لضمان أفضل استقبال في جميع أنحاء المنزل. يقوم فنيوّنا أيضًا بصيانة الأنظمة القائمة، بما في ذلك فحص المحاذاة وقوة الإشارة وسلامة الكابلات.
+              </li>
+              <li>
+                <strong>تركيب وصيانة الدش المركزي للأماكن التجارية:</strong> تركيب للأعمال التجارية مثل المكاتب والمتاجر والمباني التجارية، مع ضمان استقبال قوي وواضح لعدة أجهزة استقبال. صيانة دورية لمنع أي انقطاع في الإشارة وضمان تشغيل سلس لأغراض العمل.
+              </li>
+              <li>
+                <strong>تركيب وصيانة الدش المركزي للمصانع والمنشآت الصناعية:</strong> تركيب أنظمة الأقمار الصناعية واسعة النطاق للمصانع أو المجمعات الصناعية، مصممة لتغطية قصوى. تشمل خدمات الصيانة تحسين الإشارة، وفحص الأنظمة، وإصلاح أي مشاكل في المعدات الصناعية.
+              </li>
+            </ol>
+            <p className="mt-3">
+              تتوفر جميع هذه الخدمات في جميع أنحاء خميس مشيط، حيث نقدم تركيب وصيانة الدش الفضائي بطريقة موثوقة وفي الوقت المناسب وبأسلوب احترافي للمنازل والأعمال التجارية والمنشآت الصناعية.
+            </p>
+          </div>
+
         </div>
+      </section>
 
-        {/* Maintenance Tips */}
-        <div>
-          <h3 className="text-xl font-bold mb-2">🔹 نصائح لصيانة الدش</h3>
-          <ul className="list-disc list-inside space-y-2 text-gray-700">
-            <li>تحقق دائمًا من محاذاة طبق الدش بانتظام للحفاظ على قوة الإشارة.</li>
-            <li>حافظ على نظافة الطبق والكابلات من الغبار والأوساخ والحطام.</li>
-            <li>افحص التوصيلات والكابلات للتأكد من عدم وجود تآكل أو تلف كل بضعة أشهر.</li>
-            <li>تجنب تركيب الأطباق بالقرب من العوائق مثل الأشجار الطويلة أو الأعمدة المعدنية.</li>
-            <li>ثبت قاعدة الطبق بإحكام لمنع تحركه أثناء الرياح القوية.</li>
-            <li>اختبر جودة الإشارة بعد العواصف أو الأمطار الغزيرة لضمان استقبال مستمر.</li>
-            <li>حدّث برنامج جهاز الاستقبال عند الحاجة للحصول على أفضل أداء.</li>
-          </ul>
-          <ul className="list-disc list-inside space-y-2 text-gray-700 mt-4">
-            <li>Always check the satellite dish alignment regularly to maintain signal strength.</li>
-            <li>Keep the dish and cables clean from dust, dirt, and debris.</li>
-            <li>Inspect the connections and cables for wear or damage every few months.</li>
-            <li>Avoid installing dishes near obstacles like tall trees or metal poles.</li>
-            <li>Secure the dish mount tightly to prevent movement during strong winds.</li>
-            <li>Test the signal quality after storms or heavy rain to ensure uninterrupted reception.</li>
-            <li>Update your receiver software when necessary for optimal performance.</li>
-          </ul>
-        </div>
-
-        {/* Why Choose Company */}
-        <div>
-          <h3 className="text-xl font-bold mb-2">🔹 لماذا تختار شركة لتركيب وصيانة الدش في خميس مشيط؟</h3>
-          <p>فنيون محترفون لديهم سنوات من الخبرة العملية.</p>
-          <p>خدمات موثوقة للمنازل والأماكن التجارية والمرافق الصناعية.</p>
-          <p>استجابة سريعة وتواصل فعال لطلبات التركيب أو الصيانة.</p>
-          <p>أسعار مناسبة وشفافة بدون رسوم خفية.</p>
-          <p>ضمان جودة لتوفير إشارة فضائية مستقرة وواضحة.</p>
-          <p>الوصول إلى أحدث الأدوات والمعدات للتركيب وضبط الإعدادات.</p>
-          <p>خدمات مخصصة تتناسب مع مختلف الأحياء واحتياجات العملاء.</p>
-
-          <p className="mt-4">
-            Professional technicians with years of hands-on experience.<br/>
-            Reliable services for homes, commercial spaces, and industrial setups.<br/>
-            Quick response and communication for installation or maintenance requests.<br/>
-            Affordable and transparent pricing without hidden charges.<br/>
-            Quality assurance to ensure a stable and clear satellite signal.<br/>
-            Access to the latest tools and equipment for installation and adjustments.<br/>
-            Personalized services tailored to different neighborhoods and customer needs.
-          </p>
-        </div>
-
-        {/* How to Find */}
-        <div>
-          <h3 className="text-xl font-bold mb-2">🔹 كيفية العثور على أفضل فني لتركيب وصيانة الدش المركزي في خميس مشيط</h3>
-          <ol className="list-decimal list-inside space-y-3">
-            <li>
-              <strong>البحث عبر الإنترنت / Search Online:</strong> استخدم محركات البحث للعثور على فنيين متخصصين في تركيب وصيانة الدش المركزي في خميس مشيط. قم بزيارة مواقع الشركات للاطلاع على أنواع الخدمات التي يقدمونها.
-            </li>
-            <li>
-              <strong>التوصيات / Recommendations:</strong> اسأل الأصدقاء والعائلة الذين سبق لهم استخدام فنيين محترفين. استفد من تجاربهم لاختيار أفضل فني ماهر وموثوق.
-            </li>
-            <li>
-              <strong>التواصل المباشر / Direct Communication:</strong> تواصل مع الفنيين المحتملين للاستفسار عن الخدمات والأسعار. حدد وقتًا مناسبًا للتركيب أو الصيانة وفقًا لاحتياجاتك.
-            </li>
-          </ol>
-        </div>
-
-        {/* Types of Services */}
-        <div>
-          <h3 className="text-xl font-bold mb-2">🔹 تركيب وصيانة الدش في خميس مشيط / Dish Installation and Maintenance in Khamis Mushait</h3>
-          <p>نقدّم مجموعة واسعة من الحلول المصممة وفقًا لاحتياجات كل عميل. خدمات تركيب الدش في خميس مشيط متوفرة للمنازل والأعمال التجارية على حد سواء.</p>
-          <ol className="list-decimal list-inside space-y-2 mt-3">
-            <li>
-              <strong>تركيب وصيانة الدش المركزي للمنازل / Central Home Dish Installation and Maintenance:</strong> نقدم تركيبًا دقيقًا لأطباق الدش المركزي للمنازل لضمان أفضل استقبال في جميع أنحاء المنزل. يقوم فنيوّنا أيضًا بصيانة الأنظمة القائمة، بما في ذلك فحص المحاذاة وقوة الإشارة وسلامة الكابلات.
-            </li>
-            <li>
-              <strong>تركيب وصيانة الدش المركزي للأماكن التجارية / Commercial Central Dish Installation and Maintenance:</strong> تركيب للأعمال التجارية مثل المكاتب والمتاجر والمباني التجارية، مع ضمان استقبال قوي وواضح لعدة أجهزة استقبال. صيانة دورية لمنع أي انقطاع في الإشارة وضمان تشغيل سلس لأغراض العمل.
-            </li>
-            <li>
-              <strong>تركيب وصيانة الدش المركزي للمصانع والمنشآت الصناعية / Industrial Central Dish Installation and Maintenance:</strong> تركيب أنظمة الأقمار الصناعية واسعة النطاق للمصانع أو المجمعات الصناعية، مصممة لتغطية قصوى. تشمل خدمات الصيانة تحسين الإشارة، وفحص الأنظمة، وإصلاح أي مشاكل في المعدات الصناعية.
-            </li>
-          </ol>
-          <p className="mt-3">
-            تتوفر جميع هذه الخدمات في جميع أنحاء خميس مشيط، حيث نقدم تركيب وصيانة الدش الفضائي بطريقة موثوقة وفي الوقت المناسب وبأسلوب احترافي للمنازل والأعمال التجارية والمنشآت الصناعية.
-          </p>
-        </div>
-
-      </div>
-    </section>
 
       {/* Tips Section */}
       <section className="max-w-6xl mx-auto py-16 px-6">
@@ -226,7 +207,10 @@ export default function Service5Page() {
               وتركيب أنظمة الصوت، وتنفيذ التمديدات السليمة للكابلات. في خميس مشيط، نقدم
               أفضل خدمات تركيب وصيانة الدش.
             </p>
-            <p className="mt-2 font-bold text-blue-600">📞 +966 558202859 — خميس مشيط</p>
+            <p className="mt-2 font-bold text-blue-600">
+              📞 <span dir="ltr">+966 558202859</span> — خميس مشيط
+            </p>
+
           </div>
 
           <div>
@@ -235,7 +219,10 @@ export default function Service5Page() {
               يتميز فنيو شركتنا بالخبرة في تركيب أطباق الدش وضبطها ومعايرة الإشارة لضمان
               استقبال قنوات فضائية بجودة عالية.
             </p>
-            <p className="mt-2 font-bold text-blue-600">📞 +966 558202859 — خميس مشيط</p>
+            <p className="mt-2 font-bold text-blue-600">
+              📞 <span dir="ltr">+966 558202859</span> — خميس مشيط
+            </p>
+
           </div>
 
           <div>
@@ -244,10 +231,14 @@ export default function Service5Page() {
               نقدم خدمات تركيب الدش بأسعار تنافسية تناسب ميزانيتك، مع ضمان الخدمة لضمان رضا
               العملاء. يمكنك أيضًا الحصول على عروض أسعار من فنيينا للمقارنة واختيار الأنسب لك.
             </p>
-            <p className="mt-2 font-bold text-blue-600">📞 +966 558202859 — خميس مشيط</p>
+            <p className="mt-2 font-bold text-blue-600">
+              📞 <span dir="ltr">+966 558202859</span> — خميس مشيط
+            </p>
+
           </div>
         </div>
       </section>
+
 
       {/* Keywords Section */}
       <section className="bg-white shadow-inner py-16 px-6">

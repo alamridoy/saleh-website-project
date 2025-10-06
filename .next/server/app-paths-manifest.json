@@ -1,8 +1,7 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
-  "/page": "app/page.js",
   "/services/centraldish/page": "app/services/centraldish/page.js",
-  "/services/customersupport/page": "app/services/customersupport/page.js",
   "/services/installation/page": "app/services/installation/page.js",
-  "/services/dishmaintenance/page": "app/services/dishmaintenance/page.js"
+  "/services/dishmaintenance/page": "app/services/dishmaintenance/page.js",
+  "/services/dishrepair/page": "app/services/dishrepair/page.js",
+  "/services/customersupport/page": "app/services/customersupport/page.js"
 }

@@ -113,7 +113,10 @@ export default function Service3Page() {
               وتركيب أنظمة الصوت، وتنفيذ التمديدات السليمة للكابلات. في خميس مشيط، نقدم
               أفضل خدمات تركيب وصيانة الدش.
             </p>
-            <p className="mt-2 font-bold text-blue-600">📞 +966 558202859 — خميس مشيط</p>
+            <p className="mt-2 font-bold text-blue-600">
+              📞 <span dir="ltr">+966 558202859</span> — خميس مشيط
+            </p>
+
           </div>
 
           <div>
@@ -122,7 +125,10 @@ export default function Service3Page() {
               يتميز فنيو شركتنا بالخبرة في تركيب أطباق الدش وضبطها ومعايرة الإشارة لضمان
               استقبال قنوات فضائية بجودة عالية.
             </p>
-            <p className="mt-2 font-bold text-blue-600">📞 +966 558202859 — خميس مشيط</p>
+            <p className="mt-2 font-bold text-blue-600">
+              📞 <span dir="ltr">+966 558202859</span> — خميس مشيط
+            </p>
+
           </div>
 
           <div>
@@ -131,10 +137,14 @@ export default function Service3Page() {
               نقدم خدمات تركيب الدش بأسعار تنافسية تناسب ميزانيتك، مع ضمان الخدمة لضمان رضا
               العملاء. يمكنك أيضًا الحصول على عروض أسعار من فنيينا للمقارنة واختيار الأنسب لك.
             </p>
-            <p className="mt-2 font-bold text-blue-600">📞 +966 558202859 — خميس مشيط</p>
+            <p className="mt-2 font-bold text-blue-600">
+              📞 <span dir="ltr">+966 558202859</span> — خميس مشيط
+            </p>
+
           </div>
         </div>
       </section>
+
       {/* Tips Section */}
       <section className="max-w-6xl mx-auto py-16 px-6">
         <h2 className="text-2xl font-bold mb-6 text-center">نصائح لصيانة الدش</h2>
