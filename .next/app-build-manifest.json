@@ -16,10 +16,25 @@
       "static/chunks/main-app.js",
       "static/chunks/app/services/service1/page.js"
     ],
-    "/services/service5/page": [
+    "/services/service2/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/services/service5/page.js"
+      "static/chunks/app/services/service2/page.js"
+    ],
+    "/services/service3/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/services/service3/page.js"
+    ],
+    "/services/service4/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/services/service4/page.js"
+    ],
+    "/services/service8/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/services/service8/page.js"
     ]
   }
 }

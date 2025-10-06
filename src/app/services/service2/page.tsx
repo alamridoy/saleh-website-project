@@ -1,48 +1,153 @@
 import React from "react";
-import { Navbar, Footer } from "@/components";
+import { Footer } from "@/components";
 
 export default function Service2Page() {
   const service = {
-    title: "صيانة الأطباق",
-    description:
-      "صيانة دورية للحفاظ على نظام القمر الصناعي يعمل بسلاسة. تشمل الفحص والتنظيف والضبط الدقيق لجميع المكونات لمنع انقطاع الإشارة وإطالة عمر المعدات.",
+    title: "خدمات تركيب وصيانة الدش في خميس مشيط",
+    subtitle: "أفضل الخدمات في جميع الأحياء مع حلول متكاملة بأسعار تنافسية",
     image: "/image/services/two.jpg",
-    details:
-      "خدمة صيانة شاملة تتضمن تنظيفًا شاملاً للطبق والمكونات، واختبار قوة الإشارة، وفحص الكابلات، والتحقق من مقاومة العوامل الجوية، وتحسين الأداء لضمان جودة إشارة ثابتة.",
-    features: ["تنظيف كامل للنظام", "اختبار الإشارة", "فحص الكابلات", "فحص مقاومة العوامل الجوية", "تقرير الأداء"],
-    duration: "1-2 ساعات",
-    price: "يبدأ من 150 ريال سعودي",
+    details: "خدماتنا مصممة لتقديم تجربة متكاملة لتركيب وصيانة الدش الفضائي في خميس مشيط، مع ضمان تجربة ترفيهية متميزة للمقيمين والسكان. نحن نعتمد على فنيينا المحترفين وذوي الخبرة لضمان تركيب جميع الأنظمة بكفاءة عالية. تغطي خدماتنا مختلف الأحياء، مع تقديم نصائح وإرشادات قيمة لتحسين جودة الخدمة ورضا العملاء.",
+    tips: [
+      "تحقق دائمًا من محاذاة طبق الدش للحفاظ على قوة الإشارة.",
+      "حافظ على نظافة الطبق والكابلات من الغبار والأوساخ.",
+      "افحص التوصيلات والكابلات للتأكد من عدم وجود تلف.",
+      "تجنب تركيب الدش بالقرب من الأشجار أو الأعمدة المعدنية.",
+      "ثبت القاعدة بإحكام لتفادي تحرك الطبق أثناء الرياح.",
+      "اختبر جودة الإشارة بعد الأمطار أو العواصف.",
+      "قم بتحديث جهاز الاستقبال عند الحاجة."
+    ],
+    keywords: [
+      "محل تركيب دش خميس مشيط",
+      "شركة تركيب دش ابها خميس",
+      "تركيب دش خميس مشيط وابها",
+      "تركيب دش مركزي خميس مشيط",
+      "تركيب كاميرات خميس مشيط",
+      "تركيب طبق الأقمار الصناعية المركزي في خميس مشيط",
+      "فني تركيب أطباق الأقمار الصناعية بالقرب مني في خميس مشيط",
+      "خدمة تصليح طبق الأقمار الصناعية في خميس مشيط",
+      "تركيب هوائي الدش في خميس مشيط",
+      "صيانة وإصلاح هوائي الدش في خميس مشيط",
+      "إعداد دش HD في خميس مشيط",
+      "حل مشكلة إشارة طبق الأقمار الصناعية في خميس مشيط",
+      "تركيب أطباق أقمار صناعية متعددة في خميس مشيط",
+      "فني دش محترف في خميس مشيط",
+      "تركيب دش بأسعار مناسبة في خميس مشيط",
+      "خدمات الدش في خميس مشيط",
+      "صيانة الدش في خميس مشيط"
+    ]
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
-      {/* <Navbar /> */}
-      <section className="bg-gradient-to-r from-gray-950/80 via-blue-950/80 to-purple-950/80 text-white py-20 px-6 text-center">
+    <div className="min-h-screen flex flex-col" dir="rtl">
+
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 text-white py-20 px-6 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">{service.title}</h1>
-        <p className="text-lg md:text-xl max-w-2xl mx-auto">{service.description}</p>
+        <h2 className="text-xl md:text-2xl mb-6">{service.subtitle}</h2>
       </section>
-      <section className="flex-1 max-w-5xl mx-auto py-16 px-6">
-        <h2 className="text-2xl font-bold mb-6">ماذا نقدم في خدمة {service.title}؟</h2>
-        <ul className="space-y-4 list-disc list-inside text-gray-800 text-lg">
-          {service.features.map((feature, idx) => <li key={idx}>{feature}</li>)}
-        </ul>
-        <div className="mt-12 text-center">
-          <a href="tel:+966558202859" className="inline-block px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full shadow-lg hover:scale-105 transition-transform duration-300">
-            اتصل الآن لحجز الخدمة
-          </a>
+
+      {/* Description Section */}
+      <section className="bg-white py-16 px-6">
+        <div className="max-w-5xl mx-auto text-gray-800 leading-relaxed space-y-6">
+          <p>{service.details}</p>
         </div>
       </section>
+
+      {/* Image Section */}
       <section className="bg-gray-50 py-16 px-6">
-        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8">
-          <img src={service.image} alt={service.title} className="w-full md:w-1/2 rounded-lg shadow-lg object-cover"/>
-          <div className="md:w-1/2 text-gray-800">
-            <h3 className="text-xl font-bold mb-4">صيانة دقيقة وفعالة</h3>
-            <p>{service.details}</p>
-            <p className="mt-4"><strong>المدة:</strong> {service.duration}</p>
-            <p><strong>السعر:</strong> {service.price}</p>
+        <div className="max-w-4xl mx-auto flex justify-center">
+          <img
+            src={service.image}
+            alt={service.title}
+            className="w-full md:w-2/3 rounded-lg shadow-lg object-cover"
+          />
+        </div>
+      </section>
+
+      {/* Service Highlights Section */}
+      <section className="bg-white py-16 px-6">
+        <div className="max-w-5xl mx-auto space-y-8 text-gray-800 leading-relaxed">
+          <h2 className="text-2xl font-bold text-center mb-8">
+            خدمات تركيب وصيانة الدش في خميس مشيط
+          </h2>
+
+          <div>
+            <h3 className="text-xl font-semibold mb-2">🔹 تركيب وصيانة الدش في خميس مشيط</h3>
+            <p>
+              نحن نقدم خدمات تركيب وصيانة الدش، بالإضافة إلى ضبط الإشارة، وتحسين الجودة،
+              وتركيب أنظمة الصوت، وتنفيذ التمديدات السليمة للكابلات. في خميس مشيط، نقدم
+              أفضل خدمات تركيب وصيانة الدش.
+            </p>
+            <p className="mt-2 font-bold text-blue-600">📞 +966 558202859 — خميس مشيط</p>
+          </div>
+
+          <div>
+            <h3 className="text-xl font-semibold mb-2">🔹 تركيب وضبط أطباق الدش في خميس مشيط</h3>
+            <p>
+              يتميز فنيو شركتنا بالخبرة في تركيب أطباق الدش وضبطها ومعايرة الإشارة لضمان
+              استقبال قنوات فضائية بجودة عالية.
+            </p>
+            <p className="mt-2 font-bold text-blue-600">📞 +966 558202859 — خميس مشيط</p>
+          </div>
+
+          <div>
+            <h3 className="text-xl font-semibold mb-2">🔹 خدمة تركيب الدش والضمان في خميس مشيط</h3>
+            <p>
+              نقدم خدمات تركيب الدش بأسعار تنافسية تناسب ميزانيتك، مع ضمان الخدمة لضمان رضا
+              العملاء. يمكنك أيضًا الحصول على عروض أسعار من فنيينا للمقارنة واختيار الأنسب لك.
+            </p>
+            <p className="mt-2 font-bold text-blue-600">📞 +966 558202859 — خميس مشيط</p>
           </div>
         </div>
       </section>
+
+      {/* Tips Section */}
+      <section className="max-w-6xl mx-auto py-16 px-6">
+        <h2 className="text-2xl font-bold mb-6 text-center">نصائح لصيانة الدش</h2>
+        <ul className="space-y-3 list-disc list-inside text-lg text-gray-700">
+          {service.tips.map((tip, idx) => (
+            <li key={idx}>{tip}</li>
+          ))}
+        </ul>
+      </section>
+
+      {/* How to Find Section */}
+      <section className="bg-white py-16 px-6">
+        <div className="max-w-5xl mx-auto text-gray-800 leading-relaxed space-y-10">
+          <div>
+            <h2 className="text-2xl font-bold mb-4">
+              كيفية العثور على أفضل فني لتركيب وصيانة الدش المركزي في خميس مشيط
+            </h2>
+            <ol className="list-decimal list-inside space-y-4">
+              <li>
+                <strong>البحث عبر الإنترنت  : </strong> استخدم محركات البحث للعثور على فنيين متخصصين
+                في تركيب وصيانة الدش المركزي في خميس مشيط. قم بزيارة مواقع الشركات للاطلاع على أنواع الخدمات التي يقدمونها.
+              </li>
+              <li>
+                <strong>التوصيات  : </strong> اسأل الأصدقاء والعائلة الذين سبق لهم استخدام فنيين محترفين.
+                استفد من تجاربهم لاختيار أفضل فني ماهر وموثوق.
+              </li>
+              <li>
+                <strong>التواصل المباشر: </strong> تواصل مع الفنيين المحتملين للاستفسار عن الخدمات والأسعار.
+                حدد وقتًا مناسبًا للتركيب أو الصيانة وفقًا لاحتياجاتك.
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      {/* Keywords Section */}
+      <section className="bg-white shadow-inner py-16 px-6">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-2xl font-bold mb-6 text-center"> تركيب وصيانة الدش المركزي في خميس مشيط هي الأكثر بحثًا.</h2>
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-lg text-gray-700">
+            {service.keywords.map((keyword, idx) => (
+              <li key={idx}>🔹 {keyword}</li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
