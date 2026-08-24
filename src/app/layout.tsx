@@ -11,10 +11,11 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://bestdishelectronics.store"),
   title:
-    "تركيب دش ابها خميس  0558202859-فني تركيب دش وشاشات خميس وابها - ترند السعودية-تركيب دش مركزي خميس مشيط",
+    "محل حسن للإلكترونيات 0558202859 - تركيب دش خميس مشيط وأبها | صيانة رسيفرات IPTV وHD | تركيب كاميرات",
   description:
-    "فني دش خميس مشيط يقدم خدمات تركيب وصيانة الدش المركزي والعادي. محل صالحة محمد أحمد التجارية يوفر تركيب دش، صيانة أعطال، بيع رسيفرات IPTV وHD، وتمديد أسلاك بجودة عالية في خميس مشيط. اتصل الآن 0558202859.",
+    "محل حسن للإلكترونيات يقدم أفضل خدمات تركيب دش خميس مشيط: تركيب دش مركزي وعادي، صيانة دش ورسيفرات IPTV وHD، بيع رسيفرات وأطباق دش عالية الجودة، وتركيب كاميرات مراقبة بخميس مشيط. فني تركيب أطباق أقمار صناعية بالقرب منك. اتصل الآن 0558202859.",
   keywords: [
     "فني دش خميس مشيط",
     "تركيب دش خميس مشيط",
@@ -28,19 +29,28 @@ export const metadata: Metadata = {
     "فني دش قريب مني خميس مشيط",
     "اطباق دش خميس مشيط",
     "اسلاك دش خميس مشيط",
+    "شركة تركيب دش ابها خميس",
+    "صيانة دش ورسيفرات IPTV وHD",
+    "بيع رسيفرات وأطباق دش عالية الجودة",
+    "فني تركيب أطباق الأقمار الصناعية بالقرب مني في خميس مشيط",
+    "تركيب كاميرات خميس مشيط",
+    "أفضل محل دش قريب منك بخميس مشيط",
+    "تركيب دش مركزي وعادي بخميس مشيط",
+    "تركيب هوائي الدش في خميس مشيط",
   ],
   openGraph: {
     title:
-      "فني دش خميس مشيط | تركيب دش مركزي وصيانة رسيفرات IPTV وHD | محل دش خميس مشيط",
-    description:"تركيب دش ابها خميس  0558202859-فني تركيب دش وشاشات خميس وابها - ترند السعودية-تركيب دش مركزي خميس مشيط",
-    url: "https://dishinstallationsaleha.com/",
-    siteName: "محل صالحة محمد أحمد التجارية",
+      "محل حسن للإلكترونيات | تركيب دش مركزي وصيانة رسيفرات IPTV وHD وكاميرات مراقبة | خميس مشيط",
+    description:
+      "محل حسن للإلكترونيات - تركيب دش خميس مشيط وأبها، صيانة دش ورسيفرات IPTV وHD، تركيب كاميرات مراقبة. اتصل 0558202859.",
+    url: "https://bestdishelectronics.store/",
+    siteName: "محل حسن للإلكترونيات",
     images: [
       {
-        url: " https://dishinstallationsaleha.com/تركيب-وصيانة-دش-خميس-مشيط",
+        url: "https://bestdishelectronics.store/image/course.png",
         width: 1200,
         height: 630,
-        alt: "فني دش خميس مشيط | Dish Installation Khamis Mushait",
+        alt: "محل حسن للإلكترونيات | Dish Installation Khamis Mushait",
       },
     ],
     locale: "ar_SA",
@@ -48,13 +58,13 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "فني دش خميس مشيط | تركيب دش مركزي وصيانة رسيفرات IPTV وHD",
+    title: "محل حسن للإلكترونيات | تركيب دش مركزي وصيانة رسيفرات IPTV وHD",
     description:
-      "تركيب وصيانة دش بخميس مشيط مع فنيين متخصصين. بيع رسيفرات IPTV وHD مع محل صالحة محمد أحمد التجارية.",
-    images: ["https://dishinstallationsaleha.com/تركيب-وصيانة-دش-خميس-مشيط"],
+      "تركيب وصيانة دش بخميس مشيط مع فنيين متخصصين. بيع رسيفرات وأطباق دش عالية الجودة وتركيب كاميرات مراقبة مع محل حسن للإلكترونيات.",
+    images: ["https://bestdishelectronics.store/image/course.png"],
   },
   alternates: {
-    canonical: "https://dishinstallationsaleha.com/",
+    canonical: "https://bestdishelectronics.store/",
   },
 };
 
@@ -71,7 +81,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://dishinstallationsaleha.com/تركيب-وصيانة-دش-خميس-مشيط",
+              "@context": "https://schema.org",
               "@type": "FAQPage",
               "mainEntity": [
                 {
@@ -79,7 +89,7 @@ export default function RootLayout({
                   "name": "كيف أجد أفضل فني دش في خميس مشيط؟",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "أفضل طريقة لإيجاد فني دش في خميس مشيط هي الاعتماد على محل صالحة محمد أحمد التجارية حيث يقدم خدمات تركيب وصيانة الدش المركزي والعادي، مع فريق فنيين متخصصين ومجهزين بأحدث أجهزة فحص الإشارة."
+                    "text": "أفضل طريقة لإيجاد فني دش في خميس مشيط هي الاعتماد على محل حسن للإلكترونيات حيث يقدم خدمات تركيب وصيانة الدش المركزي والعادي، مع فريق فنيين متخصصين ومجهزين بأحدث أجهزة فحص الإشارة."
                   }
                 },
                 {
@@ -103,7 +113,15 @@ export default function RootLayout({
                   "name": "هل يوجد محل رسيفرات IPTV وHD في خميس مشيط؟",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "نعم، محل صالحة محمد أحمد التجارية يوفر بيع رسيفرات IPTV وHD بجودة عالية مع ضمان التركيب والتشغيل، بالإضافة إلى دعم فني مستمر."
+                    "text": "نعم، محل حسن للإلكترونيات يوفر بيع رسيفرات وأطباق دش عالية الجودة IPTV وHD مع ضمان التركيب والتشغيل، بالإضافة إلى دعم فني مستمر."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "هل تقومون بتركيب كاميرات المراقبة في خميس مشيط؟",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "نعم، محل حسن للإلكترونيات يقدم خدمة تركيب كاميرات المراقبة في خميس مشيط بجانب تركيب وصيانة الدش، مع فنيين متخصصين وأسعار تنافسية."
                   }
                 },
                 {
@@ -149,7 +167,7 @@ export default function RootLayout({
         {/* Nepcha Analytics */}
         <script
           defer
-          data-site="dishinstallationsaleha.com"
+          data-site="bestdishelectronics.store"
           src="https://api.nepcha.com/js/nepcha-analytics.js"
         ></script>
 
@@ -162,13 +180,12 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify([
               {
-                "@context": "https://dishinstallationsaleha.com/تركيب-وصيانة-دش-خميس-مشيط",
+                "@context": "https://schema.org",
                 "@type": "LocalBusiness",
-                name: "محل صالحة محمد أحمد التجارية",
-                image:
-                  "https://dishinstallationsaleha.com/تركيب-وصيانة-دش-خميس-مشيط",
+                name: "محل حسن للإلكترونيات",
+                image: "https://bestdishelectronics.store/image/course.png",
                 description:
-                  "فني دش خميس مشيط يقدم خدمات تركيب دش، صيانة أعطال، بيع رسيفرات IPTV وHD، وتمديد أسلاك عالية الجودة. تغطي خدماتنا جميع أحياء خميس مشيط.",
+                  "فني دش خميس مشيط يقدم خدمات تركيب دش، صيانة أعطال، بيع رسيفرات وأطباق دش عالية الجودة IPTV وHD، تركيب كاميرات مراقبة، وتمديد أسلاك عالية الجودة. تغطي خدماتنا جميع أحياء خميس مشيط.",
                 telephone: "+966558202859",
                 address: {
                   "@type": "PostalAddress",
@@ -179,7 +196,7 @@ export default function RootLayout({
                 openingHours: "Mo-Su 08:00-23:00",
                 areaServed: "خميس مشيط",
                 priceRange: "SAR 100-500",
-                url: "https://dishinstallationsaleha.com/تركيب-وصيانة-دش-خميس-مشيط",
+                url: "https://bestdishelectronics.store/",
                 sameAs: [
                   "https://www.facebook.com/yourpage",
                   "https://www.instagram.com/yourpage",
@@ -187,24 +204,31 @@ export default function RootLayout({
                 ],
               },
               {
-                "@context": "https://dishainstallationsaleha.com/تركيب-وصيانة-دش-خميس-مشيط",
+                "@context": "https://schema.org",
                 "@type": "Service",
-                serviceType: "تركيب دش مركزي خميس مشيط",
-                provider: { "@type": "LocalBusiness", name: "محل صالحة محمد أحمد التجارية" },
+                serviceType: "تركيب دش مركزي وعادي بخميس مشيط",
+                provider: { "@type": "LocalBusiness", name: "محل حسن للإلكترونيات" },
                 areaServed: "خميس مشيط",
               },
               {
-                "@context": "https://dishinstallationsaleha.com/تركيب-وصيانة-دش-خميس-مشيط",
+                "@context": "https://schema.org",
                 "@type": "Service",
-                serviceType: "صيانة دش خميس مشيط",
-                provider: { "@type": "LocalBusiness", name: "محل صالحة محمد أحمد التجارية" },
+                serviceType: "صيانة دش ورسيفرات IPTV وHD",
+                provider: { "@type": "LocalBusiness", name: "محل حسن للإلكترونيات" },
                 areaServed: "خميس مشيط",
               },
               {
-                "@context": "https://dishinstallationsaleha.com/تركيب-وصيانة-دش-خميس-مشيط",
+                "@context": "https://schema.org",
                 "@type": "Service",
-                serviceType: "رسيفرات IPTV وHD خميس مشيط",
-                provider: { "@type": "LocalBusiness", name: "محل صالحة محمد أحمد التجارية" },
+                serviceType: "بيع رسيفرات وأطباق دش عالية الجودة",
+                provider: { "@type": "LocalBusiness", name: "محل حسن للإلكترونيات" },
+                areaServed: "خميس مشيط",
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "Service",
+                serviceType: "تركيب كاميرات خميس مشيط",
+                provider: { "@type": "LocalBusiness", name: "محل حسن للإلكترونيات" },
                 areaServed: "خميس مشيط",
               }
             ]),
@@ -214,21 +238,23 @@ export default function RootLayout({
       <body className={roboto.className}>
         <Layout>
           <section className="sr-only">
-            <h2>خدمات تركيب وصيانة الدش في خميس مشيط</h2>
+            <h2>خدمات تركيب وصيانة الدش في خميس مشيط - محل حسن للإلكترونيات</h2>
             <p>
-              نقدم أفضل خدمات <strong>فني دش خميس مشيط</strong> من تركيب دش
-              مركزي وعادي وصيانة أعطال، مع بيع رسيفرات IPTV وHD وتمديد أسلاك
-              عالية الجودة. إذا كنت تبحث عن{" "}
-              <strong>محل دش خميس مشيط</strong> أو{" "}
+              يقدم <strong>محل حسن للإلكترونيات</strong> أفضل خدمات{" "}
+              <strong>فني دش خميس مشيط</strong> من تركيب دش
+              مركزي وعادي وصيانة أعطال، مع بيع رسيفرات وأطباق دش عالية الجودة
+              IPTV وHD وتمديد أسلاك عالية الجودة. إذا كنت تبحث عن{" "}
+              <strong>أفضل محل دش قريب منك بخميس مشيط</strong> أو{" "}
               <strong>فني دش قريب منك</strong> فنحن الخيار الأمثل.
             </p>
             <ul>
-              <li>تركيب دش لجميع أنواع المنازل والشقق بخميس مشيط</li>
-              <li>صيانة أعطال ورسيفرات بجميع أنواعها</li>
-              <li>بيع رسيفرات IPTV وHD وملحقاتها</li>
-              <li>تمديد وتركيب أسلاك دش عالية الجودة</li>
-              <li>فحص وضبط الإشارة باستخدام أجهزة حديثة</li>
-              <li>أفضل فني دش مركزي وخدمات سريعة في خميس مشيط</li>
+              <li>محل تركيب دش خميس مشيط وشركة تركيب دش ابها خميس</li>
+              <li>تركيب دش مركزي وعادي بخميس مشيط لجميع أنواع المنازل والشقق</li>
+              <li>تركيب هوائي الدش في خميس مشيط وصيانة أعطال ورسيفرات بجميع أنواعها</li>
+              <li>صيانة دش ورسيفرات IPTV وHD وبيع رسيفرات وأطباق دش عالية الجودة</li>
+              <li>فني تركيب أطباق الأقمار الصناعية بالقرب مني في خميس مشيط</li>
+              <li>تركيب كاميرات خميس مشيط</li>
+              <li>تمديد وتركيب أسلاك دش عالية الجودة وفحص وضبط الإشارة باستخدام أجهزة حديثة</li>
             </ul>
           </section>
 

@@ -1,5 +1,13 @@
 import React from "react";
 import { Footer } from "@/components";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "أفضل محل دش قريب منك بخميس مشيط | صيانة دش | محل حسن للإلكترونيات",
+  description:
+    "أفضل محل دش قريب منك بخميس مشيط لصيانة دش ورسيفرات IPTV وHD وإصلاح انقطاع الإشارة. محل حسن للإلكترونيات. اتصل 0558202859.",
+  alternates: { canonical: "/services/dishmaintenance" },
+};
 
 export default function Service2Page() {
   const service = {

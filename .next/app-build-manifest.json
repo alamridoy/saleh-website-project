@@ -10,31 +10,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/page.js"
-    ],
-    "/services/centraldish/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/services/centraldish/page.js"
-    ],
-    "/services/installation/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/services/installation/page.js"
-    ],
-    "/services/dishmaintenance/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/services/dishmaintenance/page.js"
-    ],
-    "/services/dishrepair/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/services/dishrepair/page.js"
-    ],
-    "/services/customersupport/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/services/customersupport/page.js"
     ]
   }
 }

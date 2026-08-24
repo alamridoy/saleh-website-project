@@ -69,9 +69,11 @@ export function Navbar() {
       name: "خدمات تركيب وصيانة الدش",
       dropdown: [
         { name: "تركيب صحون مركزية", href: "centraldish" },
-        { name: "صيانة الأطباق", href: "dishmaintenance" },
+        { name: "أفضل محل دش قريب منك بخميس مشيط", href: "dishmaintenance" },
         { name: "إصلاح الأطباق", href: "dishrepair" },
-        { name: "بيع وتركيب أجهزة الاستقبال", href: "installation" },
+        { name: "فني تركيب أطباق الأقمار الصناعية بالقرب مني في خميس مشيط", href: "installation" },
+        { name: "تركيب كاميرات خميس مشيط", href: "cameras" },
+        { name: "بيع رسيفرات وأطباق دش عالية الجودة", href: "receivers" },
         { name: "دعم ومساعدة العملاء", href: "customersupport" },
       ],
     },
@@ -93,7 +95,7 @@ export function Navbar() {
           <div className="flex items-center group relative">
             <img
               src="/logos/storelogo.png"
-              alt="شعار محل صالحة محمد أحمد التجارية"
+              alt="شعار محل حسن للإلكترونيات"
               className="h-16 w-16 object-contain rounded-xl shadow-md transition-all duration-500 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(139,92,246,0.4)]"
             />
           </div>
@@ -238,9 +240,11 @@ export function Navbar() {
 
       {/* Hidden SEO text */}
       <div className="sr-only">
-        خدمات محل صالحة محمد أحمد التجارية تركيب دش لجميع أنواع المنازل والشقق بخميس مشيط،
-        صيانة الأعطال وحل مشاكل انقطاع الإشارة، بيع رسيفرات IPTV وHD وملحقاتها،
-        تمديد وتركيب أسلاك دش عالية الجودة، فحص وضبط الإشارة باستخدام أجهزة حديثة.
+        خدمات محل حسن للإلكترونيات: تركيب دش مركزي وعادي بخميس مشيط لجميع أنواع
+        المنازل والشقق، تركيب هوائي الدش، صيانة دش ورسيفرات IPTV وHD وحل مشاكل
+        انقطاع الإشارة، بيع رسيفرات وأطباق دش عالية الجودة وملحقاتها، تركيب
+        كاميرات خميس مشيط، تمديد وتركيب أسلاك دش عالية الجودة، فحص وضبط الإشارة
+        باستخدام أجهزة حديثة.
       </div>
     </nav>
   );

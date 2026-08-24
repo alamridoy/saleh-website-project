@@ -1,5 +1,13 @@
 import React from "react";
 import { Footer } from "@/components";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "تركيب دش مركزي وعادي بخميس مشيط | محل حسن للإلكترونيات",
+  description:
+    "شركة تركيب دش مركزي وعادي بخميس مشيط. محل حسن للإلكترونيات يقدم تركيب دش مركزي لجميع أنواع المباني والشقق مع ضبط دقيق للإشارة. اتصل 0558202859.",
+  alternates: { canonical: "/services/centraldish" },
+};
 
 export default function Service1Page() {
   const service = {

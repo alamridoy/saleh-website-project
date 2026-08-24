@@ -1,5 +1,13 @@
 import React from "react";
 import { Footer } from "@/components";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "إصلاح الدش بخميس مشيط | محل حسن للإلكترونيات",
+  description:
+    "خدمة إصلاح الدش بخميس مشيط بقطع غيار أصلية وتشخيص سريع لمشاكل انقطاع الإشارة. محل حسن للإلكترونيات. اتصل 0558202859.",
+  alternates: { canonical: "/services/dishrepair" },
+};
 
 export default function Service3Page() {
   const service = {

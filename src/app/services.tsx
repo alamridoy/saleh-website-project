@@ -15,7 +15,7 @@ const SERVICES = [
     price: "يبدأ من 500 ريال سعودي"
   },
   {
-    title: "صيانة الأطباق",
+    title: "أفضل محل دش قريب منك بخميس مشيط",
     description:
       "صيانة دورية للحفاظ على نظام القمر الصناعي يعمل بسلاسة. تشمل الفحص والتنظيف والضبط الدقيق لجميع المكونات لمنع انقطاع الإشارة وإطالة عمر المعدات.",
     image: "/image/services/two.jpg",
@@ -35,7 +35,7 @@ const SERVICES = [
     price: "يبدأ من 200 ريال سعودي"
   },
   {
-    title: "بيع وتركيب أجهزة الاستقبال",
+    title: "فني تركيب أطباق الأقمار الصناعية بالقرب مني في خميس مشيط",
     description:
       "يقدم فني تركيب دش أبها وخميس خدمات بيع أجهزة الاستقبال بأفضل الأسعار وتركيبها باحترافية. يتم اختيار الأجهزة بناءً على أحدث التقنيات لضمان أفضل تجربة مشاهدة.",
     image: "/image/services/four.jpg",
@@ -45,9 +45,9 @@ const SERVICES = [
     price: "حسب نوع الجهاز"
   },
   {
-    title: "ضبط إشارات الأقمار والترددات",
+    title: "محل تركيب طبق الأقمار الصناعية المركزي في خميس مشيط",
     description:
-      "يتمتع فني شركة تركيب دش خميس مشيط وأبها بخبرة واسعة في ضبط إشارات الأقمار والترددات للحصول على أفضل جودة إشارة باستخدام أحدث التقنيات.",
+      "يتمتع فني شركة تركيب دش خميس مشيط وأبها بخبرة واسعة في محل تركيب طبق الأقمار الصناعية المركزي في خميس مشيط للحصول على أفضل جودة إشارة باستخدام أحدث التقنيات.",
     image: "/image/services/five.jpg",
     details: "نستخدم أحدث أجهزة الكشف عن الإشارة لضبط دقيق لإشارات الأقمار الصناعية والترددات، مما يضمن لك جودة صورة وصوت فائقة، والتخلص من أي تقطعات أو ضعف في الإشارة.",
     features: ["استخدام أحدث الأجهزة", "ضبط دقيق للإشارة", "تحسين جودة الصوت والصورة", "حل مشاكل التقطيع", "خدمة سريعة وفعالة"],
@@ -55,7 +55,7 @@ const SERVICES = [
     price: "يبدأ من 120 ريال سعودي"
   },
   {
-    title: "تأسيس الدش المركزي والعادي",
+    title: "محل تركيب دش خميس مشيط",
     description:
       "إذا كنت تحتاج إلى تأسيس نظام دش مركزي أو عادي في منزلك أو مكتبك، يوفر فني تركيب دش أبها وخميس خدمات تأسيس متكاملة لضمان أداء متميز.",
     image: "/image/services/six.jpg",
@@ -73,6 +73,16 @@ const SERVICES = [
     features: ["تفعيل جميع الباقات", "تركيب سريع وفعال", "دعم فني", "حلول مشاكل التشفير", "أسعار مناسبة"],
     duration: "1-2 ساعات",
     price: "حسب الباقة"
+  },
+  {
+    title: "تركيب كاميرات خميس مشيط",
+    description:
+      "يقدم محل حسن للإلكترونيات خدمة تركيب كاميرات المراقبة للمنازل والمحلات والشركات في خميس مشيط، مع اختيار أفضل الأنظمة وربطها بالجوال لمتابعة البث المباشر أينما كنت.",
+    image: "/image/services/eight.jpg",
+    details: "تشمل خدمة تركيب كاميرات المراقبة تركيبًا احترافيًا للكاميرات الداخلية والخارجية، وتوصيل الأسلاك وأجهزة التسجيل (DVR/NVR)، وربط النظام بتطبيق الجوال للمشاهدة عن بعد، مع ضبط زوايا التصوير لتغطية شاملة وآمنة.",
+    features: ["كاميرات داخلية وخارجية", "ربط بالجوال للمتابعة المباشرة", "أجهزة تسجيل عالية الدقة", "تمديد أسلاك احترافي", "ضمان على التركيب"],
+    duration: "2-5 ساعات",
+    price: "حسب عدد الكاميرات"
   },
   {
     title: "دعم ومساعدة العملاء",
@@ -157,7 +167,7 @@ export function SatelliteDishService() {
           <div className="absolute top-20 left-20 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-20 w-80 h-80 bg-purple-500 rounded-full blur-3xl"></div>
         </div>
-        
+
         <div className="container mx-auto relative z-10">
           {/* Header Section */}
           <div className="text-center mb-20">
@@ -178,24 +188,23 @@ export function SatelliteDishService() {
           <div className="max-w-6xl mx-auto space-y-12">
             {SERVICES.map((service, index) => {
               const isEven = index % 2 === 0;
-              
+
               return (
                 <div
                   key={service.title}
                   ref={(el) => {
                     cardRefs.current[index] = el;
                   }}
-                  className={`transform transition-all duration-1000 ease-out ${
-                    visibleCards[index]
-                      ? "opacity-100 translate-x-0"
-                      : `opacity-0 ${isEven ? "translate-x-20" : "-translate-x-20"}`
-                  }`}
+                  className={`transform transition-all duration-1000 ease-out ${visibleCards[index]
+                    ? "opacity-100 translate-x-0"
+                    : `opacity-0 ${isEven ? "translate-x-20" : "-translate-x-20"}`
+                    }`}
                   onMouseEnter={() => setHoveredCard(index)}
                   onMouseLeave={() => setHoveredCard(null)}
                 >
                   <div className="group relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100">
                     <div className={`flex flex-col ${isEven ? "lg:flex-row" : "lg:flex-row-reverse"} min-h-[300px]`}>
-                      
+
                       {/* Image Section */}
                       <div className="relative lg:w-2/5 h-64 lg:h-auto overflow-hidden">
                         <img
@@ -205,7 +214,7 @@ export function SatelliteDishService() {
                         />
                         {/* Gradient overlay */}
                         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        
+
                       </div>
 
                       {/* Content Section */}
@@ -216,16 +225,15 @@ export function SatelliteDishService() {
                           </Typography>
                           <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mb-6 transform transition-all duration-500 group-hover:w-32"></div>
                         </div>
-                        
+
                         <Typography className="text-gray-600 text-lg leading-relaxed mb-8" {...({} as any)}>
                           {service.description}
                         </Typography>
-                        
+
                         {/* Action buttons */}
-                        <div className={`flex flex-col sm:flex-row gap-4 transform transition-all duration-500 ${
-                          hoveredCard === index ? "translate-y-0 opacity-100" : "translate-y-2 opacity-80"
-                        }`}>
-                          <button 
+                        <div className={`flex flex-col sm:flex-row gap-4 transform transition-all duration-500 ${hoveredCard === index ? "translate-y-0 opacity-100" : "translate-y-2 opacity-80"
+                          }`}>
+                          <button
                             onClick={() => window.open('tel:+966558202859', '_self')}
                             className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
                           >
@@ -234,7 +242,7 @@ export function SatelliteDishService() {
                             </svg>
                             احصل على الخدمة
                           </button>
-                          <button 
+                          <button
                             onClick={() => openModal(index)}
                             className="px-8 py-3 border-2 border-gray-300 text-gray-700 rounded-full font-semibold hover:border-blue-500 hover:text-blue-600 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
                           >
@@ -248,20 +256,17 @@ export function SatelliteDishService() {
                     </div>
 
                     {/* Decorative elements */}
-                    <div className={`absolute -top-4 ${isEven ? "-right-4" : "-left-4"} w-24 h-24 bg-gradient-to-br from-blue-400/30 to-purple-500/30 rounded-full transition-all duration-500 ${
-                      hoveredCard === index ? "scale-125 opacity-100" : "opacity-60"
-                    }`}></div>
-                    <div className={`absolute -bottom-4 ${isEven ? "-left-4" : "-right-4"} w-16 h-16 bg-gradient-to-tr from-purple-400/30 to-pink-500/30 rounded-full transition-all duration-500 ${
-                      hoveredCard === index ? "scale-125 opacity-100" : "opacity-60"
-                    }`}></div>
+                    <div className={`absolute -top-4 ${isEven ? "-right-4" : "-left-4"} w-24 h-24 bg-gradient-to-br from-blue-400/30 to-purple-500/30 rounded-full transition-all duration-500 ${hoveredCard === index ? "scale-125 opacity-100" : "opacity-60"
+                      }`}></div>
+                    <div className={`absolute -bottom-4 ${isEven ? "-left-4" : "-right-4"} w-16 h-16 bg-gradient-to-tr from-purple-400/30 to-pink-500/30 rounded-full transition-all duration-500 ${hoveredCard === index ? "scale-125 opacity-100" : "opacity-60"
+                      }`}></div>
                   </div>
 
                   {/* Hover glow effect */}
-                  <div className={`absolute inset-0 rounded-3xl transition-all duration-500 -z-10 ${
-                    hoveredCard === index 
-                      ? "bg-gradient-to-r from-blue-400/20 to-purple-400/20 blur-xl scale-105" 
-                      : ""
-                  }`}></div>
+                  <div className={`absolute inset-0 rounded-3xl transition-all duration-500 -z-10 ${hoveredCard === index
+                    ? "bg-gradient-to-r from-blue-400/20 to-purple-400/20 blur-xl scale-105"
+                    : ""
+                    }`}></div>
                 </div>
               );
             })}
@@ -273,11 +278,11 @@ export function SatelliteDishService() {
       {selectedService !== null && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
           {/* Backdrop */}
-          <div 
+          <div
             className="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity duration-300"
             onClick={closeModal}
           ></div>
-          
+
           {/* Modal Content */}
           <div className="relative bg-white rounded-3xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto transform transition-all duration-300 scale-100">
             {/* Close Button */}
@@ -369,7 +374,7 @@ export function SatelliteDishService() {
                   className="flex-1 px-8 py-4 border-2 border-green-500 text-green-600 rounded-2xl font-semibold hover:bg-green-500 hover:text-white transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.687"/>
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.687" />
                   </svg>
                   واتساب
                 </button>

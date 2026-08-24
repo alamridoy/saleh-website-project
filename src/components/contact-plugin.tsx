@@ -12,21 +12,21 @@ export default function ContactPlugin() {
       href: "tel:+966558202859",
       color: "bg-blue-600",
       icon: "https://img.icons8.com/ios-filled/24/ffffff/phone.png",
-      alt: "اتصال مباشر بمحلات صالحة محمد أحمد التجارية",
+      alt: "اتصال مباشر بمحل حسن للإلكترونيات",
     },
     {
       label: "واتساب",
       href: "https://wa.me/966558202859",
       color: "bg-green-600",
       icon: "https://img.icons8.com/ios-filled/24/ffffff/whatsapp.png",
-      alt: "تواصل عبر واتساب مع محل صالحة محمد أحمد التجارية",
+      alt: "تواصل عبر واتساب مع محل حسن للإلكترونيات",
     },
     {
       label: "بريد إلكتروني",
       href: "mailto:mdparvez.ahmed.509@gmail.com",
       color: "bg-red-600",
       icon: "https://img.icons8.com/ios-filled/24/ffffff/new-post.png",
-      alt: "إرسال بريد إلكتروني لمحل صالحة محمد أحمد التجارية",
+      alt: "إرسال بريد إلكتروني لمحل حسن للإلكترونيات",
     },
   ];
 
@@ -77,8 +77,9 @@ export default function ContactPlugin() {
 
           {/* ✅ Hidden SEO Text */}
           <div className="sr-only">
-            تواصل مع محل صالحة محمد أحمد التجارية في خميس مشيط عبر الهاتف، واتساب
-            أو البريد الإلكتروني للحصول على أفضل خدمات تركيب وصيانة الدش.
+            تواصل مع محل حسن للإلكترونيات في خميس مشيط عبر الهاتف، واتساب
+            أو البريد الإلكتروني للحصول على أفضل خدمات تركيب دش مركزي وعادي
+            وصيانة دش ورسيفرات IPTV وHD وتركيب كاميرات.
           </div>
         </motion.div>
       )}

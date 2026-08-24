@@ -1,5 +1,13 @@
 import React from "react";
 import { Footer } from "@/components";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "دعم العملاء والمساعدة بخميس مشيط | محل حسن للإلكترونيات",
+  description:
+    "دعم فني على مدار الساعة لعملاء محل حسن للإلكترونيات في خميس مشيط، لجميع خدمات تركيب وصيانة الدش والكاميرات. اتصل 0558202859.",
+  alternates: { canonical: "/services/customersupport" },
+};
 
 export default function Service5Page() {
   const service = {
