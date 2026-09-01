@@ -1,9 +1,11 @@
 import React from "react";
+import { RelatedServices, Breadcrumbs } from "@/components/cta";
+import { ServiceJsonLd } from "@/components/ServiceJsonLd";
 import { Footer } from "@/components";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "دعم العملاء والمساعدة بخميس مشيط | محل حسن للإلكترونيات",
+  title: "الدعم الفني وخدمة العملاء لأنظمة الدش والرسيفرات في خميس مشيط",
   description:
     "دعم فني على مدار الساعة لعملاء محل حسن للإلكترونيات في خميس مشيط، لجميع خدمات تركيب وصيانة الدش والكاميرات. اتصل 0558202859.",
   alternates: { canonical: "/services/customersupport" },
@@ -47,11 +49,23 @@ export default function Service5Page() {
 
   return (
     <div className="min-h-screen flex flex-col" dir="rtl">
+      <ServiceJsonLd
+        name={"دعم فني للدش والرسيفرات خميس مشيط"}
+        description={"الدعم الفني وخدمة العملاء لأنظمة الدش والرسيفرات وكاميرات المراقبة في خميس مشيط."}
+        path="/services/customersupport"
+      />
+      <Breadcrumbs
+        items={[
+          { name: "الرئيسية", href: "/" },
+          { name: "الخدمات", href: "/#services" },
+          { name: "دعم فني للدش والرسيفرات خميس مشيط" },
+        ]}
+      />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 text-white py-20 px-6 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">{service.title}</h1>
-        <h2 className="text-xl md:text-2xl mb-6">{service.subtitle}</h2>
+        <p className="text-lg md:text-xl mb-6 max-w-3xl mx-auto text-blue-100">{service.subtitle}</p>
       </section>
 
       {/* Description Section */}
@@ -247,18 +261,7 @@ export default function Service5Page() {
         </div>
       </section>
 
-
-      {/* Keywords Section */}
-      <section className="bg-white shadow-inner py-16 px-6">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold mb-6 text-center">الكلمات المفتاحية الأكثر بحثًا</h2>
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-lg text-gray-700">
-            {service.keywords.map((keyword, idx) => (
-              <li key={idx}>🔹 {keyword}</li>
-            ))}
-          </ul>
-        </div>
-      </section>
+      <RelatedServices exclude="/services/customersupport" />
 
       <Footer />
     </div>

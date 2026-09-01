@@ -1,60 +1,50 @@
 import type { MetadataRoute } from "next";
+import { business } from "@/config/business";
+import { GUIDES } from "./guides/guides-data";
 
 export const dynamic = "force-static";
 
-const baseUrl = "https://bestdishelectronics.store";
+const baseUrl = business.DOMAIN;
+
+const SERVICE_SLUGS = [
+  "installation",
+  "dishmaintenance",
+  "dishrepair",
+  "centraldish",
+  "receivers",
+  "screens",
+  "cameras",
+  "customersupport",
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
 
   return [
+    { url: `${baseUrl}/`, lastModified, changeFrequency: "weekly", priority: 1 },
     {
-      url: `${baseUrl}/`,
-      lastModified,
-      changeFrequency: "weekly",
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/services/centraldish`,
+      url: `${baseUrl}/location/khamis-mushait`,
       lastModified,
       changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    ...SERVICE_SLUGS.map((s) => ({
+      url: `${baseUrl}/services/${s}`,
+      lastModified,
+      changeFrequency: "monthly" as const,
       priority: 0.8,
-    },
+    })),
     {
-      url: `${baseUrl}/services/dishmaintenance`,
+      url: `${baseUrl}/guides`,
       lastModified,
       changeFrequency: "monthly",
-      priority: 0.8,
+      priority: 0.6,
     },
-    {
-      url: `${baseUrl}/services/dishrepair`,
+    ...GUIDES.map((g) => ({
+      url: `${baseUrl}/guides/${g.slug}`,
       lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/services/installation`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/services/cameras`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/services/receivers`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/services/customersupport`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
+      changeFrequency: "yearly" as const,
+      priority: 0.5,
+    })),
   ];
 }

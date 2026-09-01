@@ -13,6 +13,7 @@ export default function ContactPlugin() {
       color: "bg-blue-600",
       icon: "https://img.icons8.com/ios-filled/24/ffffff/phone.png",
       alt: "اتصال مباشر بمحل حسن للإلكترونيات",
+      cta: "phone_click",
     },
     {
       label: "واتساب",
@@ -20,13 +21,15 @@ export default function ContactPlugin() {
       color: "bg-green-600",
       icon: "https://img.icons8.com/ios-filled/24/ffffff/whatsapp.png",
       alt: "تواصل عبر واتساب مع محل حسن للإلكترونيات",
+      cta: "whatsapp_click",
     },
     {
-      label: "بريد إلكتروني",
-      href: "mailto:mdparvez.ahmed.509@gmail.com",
-      color: "bg-red-600",
-      icon: "https://img.icons8.com/ios-filled/24/ffffff/new-post.png",
-      alt: "إرسال بريد إلكتروني لمحل حسن للإلكترونيات",
+      label: "الموقع",
+      href: "https://maps.app.goo.gl/vL2v7rJFLw8nhcPx8",
+      color: "bg-gray-800",
+      icon: "https://img.icons8.com/ios-filled/24/ffffff/marker.png",
+      alt: "عرض موقع محل حسن للإلكترونيات على خرائط Google",
+      cta: "maps_click",
     },
   ];
 
@@ -48,7 +51,7 @@ export default function ContactPlugin() {
     <AnimatePresence>
       {!isBottom && (
         <motion.div
-          className="fixed bottom-6 right-6 flex flex-col items-end gap-3 z-50"
+          className="fixed bottom-6 right-6 hidden flex-col items-end gap-3 z-50 md:flex"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 40 }}
@@ -65,6 +68,7 @@ export default function ContactPlugin() {
               whileTap={{ scale: 0.95 }}
               className="w-full flex justify-end"
               aria-label={c.alt}
+              data-cta={c.cta}
             >
               <button
                 className={`${c.color} text-white px-5 py-3 rounded-full flex items-center gap-3 shadow-lg`}
@@ -74,13 +78,6 @@ export default function ContactPlugin() {
               </button>
             </motion.a>
           ))}
-
-          {/* ✅ Hidden SEO Text */}
-          <div className="sr-only">
-            تواصل مع محل حسن للإلكترونيات في خميس مشيط عبر الهاتف، واتساب
-            أو البريد الإلكتروني للحصول على أفضل خدمات تركيب دش مركزي وعادي
-            وصيانة دش ورسيفرات IPTV وHD وتركيب كاميرات.
-          </div>
         </motion.div>
       )}
     </AnimatePresence>

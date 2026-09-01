@@ -1,1 +1,134 @@
-{"version":3,"caseSensitive":false,"basePath":"","rewrites":{"beforeFiles":[],"afterFiles":[],"fallback":[]},"redirects":[{"source":"/:path+/","destination":"/:path+","permanent":true,"internal":true,"regex":"^(?:\\/((?:[^\\/]+?)(?:\\/(?:[^\\/]+?))*))\\/$"}],"headers":[]}
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [
+    {
+      "page": "/guides/[slug]",
+      "regex": "^/guides/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/guides/(?<nxtPslug>[^/]+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/guides",
+      "regex": "^/guides(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/guides(?:/)?$"
+    },
+    {
+      "page": "/location/khamis-mushait",
+      "regex": "^/location/khamis\\-mushait(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/location/khamis\\-mushait(?:/)?$"
+    },
+    {
+      "page": "/robots.txt",
+      "regex": "^/robots\\.txt(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/robots\\.txt(?:/)?$"
+    },
+    {
+      "page": "/services/cameras",
+      "regex": "^/services/cameras(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/cameras(?:/)?$"
+    },
+    {
+      "page": "/services/centraldish",
+      "regex": "^/services/centraldish(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/centraldish(?:/)?$"
+    },
+    {
+      "page": "/services/customersupport",
+      "regex": "^/services/customersupport(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/customersupport(?:/)?$"
+    },
+    {
+      "page": "/services/dishmaintenance",
+      "regex": "^/services/dishmaintenance(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/dishmaintenance(?:/)?$"
+    },
+    {
+      "page": "/services/dishrepair",
+      "regex": "^/services/dishrepair(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/dishrepair(?:/)?$"
+    },
+    {
+      "page": "/services/installation",
+      "regex": "^/services/installation(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/installation(?:/)?$"
+    },
+    {
+      "page": "/services/receivers",
+      "regex": "^/services/receivers(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/receivers(?:/)?$"
+    },
+    {
+      "page": "/services/screens",
+      "regex": "^/services/screens(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/screens(?:/)?$"
+    },
+    {
+      "page": "/sitemap.xml",
+      "regex": "^/sitemap\\.xml(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/sitemap\\.xml(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments"
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}

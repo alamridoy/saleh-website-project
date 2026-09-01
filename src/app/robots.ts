@@ -1,15 +1,12 @@
 import type { MetadataRoute } from "next";
+import { business } from "@/config/business";
 
 export const dynamic = "force-static";
 
-const baseUrl = "https://bestdishelectronics.store";
-
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: {
-      userAgent: "*",
-      allow: "/",
-    },
-    sitemap: `${baseUrl}/sitemap.xml`,
+    rules: [{ userAgent: "*", allow: "/" }],
+    sitemap: `${business.DOMAIN}/sitemap.xml`,
+    host: business.DOMAIN,
   };
 }

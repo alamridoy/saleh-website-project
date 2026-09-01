@@ -1,9 +1,11 @@
 import React from "react";
+import { RelatedServices, Breadcrumbs } from "@/components/cta";
+import { ServiceJsonLd } from "@/components/ServiceJsonLd";
 import { Footer } from "@/components";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "تركيب دش مركزي وعادي بخميس مشيط | محل حسن للإلكترونيات",
+  title: "تركيب دش مركزي خميس مشيط | أنظمة الدش المركزي للعمائر",
   description:
     "شركة تركيب دش مركزي وعادي بخميس مشيط. محل حسن للإلكترونيات يقدم تركيب دش مركزي لجميع أنواع المباني والشقق مع ضبط دقيق للإشارة. اتصل 0558202859.",
   alternates: { canonical: "/services/centraldish" },
@@ -11,8 +13,8 @@ export const metadata: Metadata = {
 
 export default function Service1Page() {
   const service = {
-    title: "شركة تركيب الدش المركزي والعادي في خميس مشيط، المملكة العربية السعودية",
-    subtitle: "أفضل شركة لتركيب الدش الفضائي في خميس مشيط",
+    title: "تركيب دش مركزي خميس مشيط",
+    subtitle: "أنظمة الدش المركزي للعمائر والمجمعات السكنية والمنشآت في خميس مشيط",
 
     image: "/image/services/one.jpg",
     details: "تشمل خدمتنا تركيب وصيانة الدش المركزي مع ضبط الإشارة، تحسين الجودة، تركيب أنظمة الصوت، وتنفيذ التمديدات السليمة للكابلات. نقدم خدماتنا للمنازل، الشركات، والمصانع.",
@@ -57,11 +59,23 @@ export default function Service1Page() {
 
   return (
     <div className="min-h-screen flex flex-col" dir="rtl">
+      <ServiceJsonLd
+        name={"تركيب دش مركزي خميس مشيط"}
+        description={"تركيب أنظمة الدش المركزي للعمائر والمجمعات السكنية والمنشآت في خميس مشيط مع توزيع الإشارة ووحدات التقوية."}
+        path="/services/centraldish"
+      />
+      <Breadcrumbs
+        items={[
+          { name: "الرئيسية", href: "/" },
+          { name: "الخدمات", href: "/#services" },
+          { name: "تركيب دش مركزي خميس مشيط" },
+        ]}
+      />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 text-white py-20 px-6 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">{service.title}</h1>
-        <h2 className="text-xl md:text-2xl mb-6">{service.subtitle}</h2>
+        <p className="text-lg md:text-xl mb-6 max-w-3xl mx-auto text-blue-100">{service.subtitle}</p>
       </section>
 
       <section className="bg-white py-16 px-6">
@@ -200,18 +214,7 @@ export default function Service1Page() {
         </div>
       </section>
 
-
-      {/* Keywords Section */}
-      <section className="bg-white shadow-inner py-16 px-6">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold mb-6 text-center"> تركيب وصيانة الدش المركزي في خميس مشيط هي الأكثر بحثًا.</h2>
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-lg text-gray-700">
-            {service.keywords.map((keyword, idx) => (
-              <li key={idx}>🔹 {keyword}</li>
-            ))}
-          </ul>
-        </div>
-      </section>
+      <RelatedServices exclude="/services/centraldish" />
 
       <Footer />
     </div>

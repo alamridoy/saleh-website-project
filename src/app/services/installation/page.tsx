@@ -1,18 +1,20 @@
 import React from "react";
+import { RelatedServices, Breadcrumbs } from "@/components/cta";
+import { ServiceJsonLd } from "@/components/ServiceJsonLd";
 import { Footer } from "@/components";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "فني تركيب أطباق الأقمار الصناعية بالقرب مني في خميس مشيط | محل حسن للإلكترونيات",
+  title: "تركيب دش خميس مشيط | تركيب أطباق الأقمار الصناعية وضبط الإشارة",
   description:
-    "فني تركيب أطباق الأقمار الصناعية بالقرب مني في خميس مشيط. تركيب هوائي الدش وضبط الإشارة باحترافية مع محل حسن للإلكترونيات. اتصل 0558202859.",
+    "تركيب دش في خميس مشيط: تثبيت الطبق على السطح أو الجدار، توصيل الكابلات ووحدة الـ LNB، وضبط إشارة نايل سات وعرب سات. اتصل أو واتساب 0558202859.",
   alternates: { canonical: "/services/installation" },
 };
 
 export default function Service4Page() {
   const service = {
-    title: "فني تركيب أطباق الأقمار الصناعية بالقرب مني في خميس مشيط",
-    subtitle: "أفضل خدمات تركيب وضبط أجهزة الاستقبال الفضائي في خميس مشيط",
+    title: "تركيب دش خميس مشيط",
+    subtitle: "تركيب أطباق الأقمار الصناعية وأجهزة الاستقبال وضبط الإشارة في خميس مشيط",
     image: "/image/services/four.jpg",
     details: `أهمية التركيب الاحترافي لأجهزة الاستقبال الفضائي
 يُعدّ التركيب الصحيح لأجهزة الاستقبال الفضائي أمرًا ضروريًا لضمان استقبال إشارة واضحة ومشاهدة دون انقطاع. 
@@ -74,11 +76,23 @@ export default function Service4Page() {
 
   return (
     <div className="min-h-screen flex flex-col" dir="rtl">
+      <ServiceJsonLd
+        name={"تركيب دش خميس مشيط"}
+        description={"تركيب دش وأطباق الأقمار الصناعية في خميس مشيط، تركيب هوائي الدش على السطح أو الجدار وضبط إشارة نايل سات وعرب سات."}
+        path="/services/installation"
+      />
+      <Breadcrumbs
+        items={[
+          { name: "الرئيسية", href: "/" },
+          { name: "الخدمات", href: "/#services" },
+          { name: "تركيب دش خميس مشيط" },
+        ]}
+      />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 text-white py-20 px-6 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">{service.title}</h1>
-        <h2 className="text-xl md:text-2xl mb-6">{service.subtitle}</h2>
+        <p className="text-lg md:text-xl mb-6 max-w-3xl mx-auto text-blue-100">{service.subtitle}</p>
       </section>
 
       {/* Details Section */}
@@ -208,18 +222,7 @@ export default function Service4Page() {
         </ul>
       </section>
 
-
-      {/* Keywords Section */}
-      <section className="bg-white shadow-inner py-16 px-6">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold mb-6 text-center">كلمات مفتاحية متعلقة بأجهزة الاستقبال الفضائي</h2>
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-lg text-gray-700">
-            {service.keywords.map((keyword, idx) => (
-              <li key={idx}>🔹 {keyword}</li>
-            ))}
-          </ul>
-        </div>
-      </section>
+      <RelatedServices exclude="/services/installation" />
 
       <Footer />
     </div>

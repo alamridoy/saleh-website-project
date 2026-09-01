@@ -1,18 +1,20 @@
 import React from "react";
+import { RelatedServices, Breadcrumbs } from "@/components/cta";
+import { ServiceJsonLd } from "@/components/ServiceJsonLd";
 import { Footer } from "@/components";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "أفضل محل دش قريب منك بخميس مشيط | صيانة دش | محل حسن للإلكترونيات",
+  title: "صيانة دش خميس مشيط | ضبط إشارة نايل سات وعرب سات",
   description:
-    "أفضل محل دش قريب منك بخميس مشيط لصيانة دش ورسيفرات IPTV وHD وإصلاح انقطاع الإشارة. محل حسن للإلكترونيات. اتصل 0558202859.",
+    "صيانة الدش في خميس مشيط: فحص الطبق والكابلات ووحدة الـ LNB، ضبط إشارة نايل سات وعرب سات، وحل مشاكل ضعف الاستقبال والتقطيع. اتصل أو واتساب 0558202859.",
   alternates: { canonical: "/services/dishmaintenance" },
 };
 
 export default function Service2Page() {
   const service = {
-    title: "خدمات تركيب وصيانة الدش في خميس مشيط",
-    subtitle: "أفضل الخدمات في جميع الأحياء مع حلول متكاملة بأسعار تنافسية",
+    title: "صيانة دش خميس مشيط",
+    subtitle: "فحص الطبق والكابلات ووحدة الـ LNB، وضبط إشارة نايل سات وعرب سات",
     image: "/image/services/two.jpg",
     details: "خدماتنا مصممة لتقديم تجربة متكاملة لتركيب وصيانة الدش الفضائي في خميس مشيط، مع ضمان تجربة ترفيهية متميزة للمقيمين والسكان. نحن نعتمد على فنيينا المحترفين وذوي الخبرة لضمان تركيب جميع الأنظمة بكفاءة عالية. تغطي خدماتنا مختلف الأحياء، مع تقديم نصائح وإرشادات قيمة لتحسين جودة الخدمة ورضا العملاء.",
     tips: [
@@ -47,11 +49,23 @@ export default function Service2Page() {
 
   return (
     <div className="min-h-screen flex flex-col" dir="rtl">
+      <ServiceJsonLd
+        name={"صيانة دش خميس مشيط"}
+        description={"صيانة الدش وضبط الإشارة وحل مشاكل ضعف الاستقبال والتقطيع في خميس مشيط، فحص الطبق والكابلات ووحدة الـ LNB."}
+        path="/services/dishmaintenance"
+      />
+      <Breadcrumbs
+        items={[
+          { name: "الرئيسية", href: "/" },
+          { name: "الخدمات", href: "/#services" },
+          { name: "صيانة دش خميس مشيط" },
+        ]}
+      />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 text-white py-20 px-6 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">{service.title}</h1>
-        <h2 className="text-xl md:text-2xl mb-6">{service.subtitle}</h2>
+        <p className="text-lg md:text-xl mb-6 max-w-3xl mx-auto text-blue-100">{service.subtitle}</p>
       </section>
 
       {/* Description Section */}
@@ -154,17 +168,7 @@ export default function Service2Page() {
         </div>
       </section>
 
-      {/* Keywords Section */}
-      <section className="bg-white shadow-inner py-16 px-6">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold mb-6 text-center"> تركيب وصيانة الدش المركزي في خميس مشيط هي الأكثر بحثًا.</h2>
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-lg text-gray-700">
-            {service.keywords.map((keyword, idx) => (
-              <li key={idx}>🔹 {keyword}</li>
-            ))}
-          </ul>
-        </div>
-      </section>
+      <RelatedServices exclude="/services/dishmaintenance" />
 
       <Footer />
     </div>

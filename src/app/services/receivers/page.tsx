@@ -1,18 +1,20 @@
 import React from "react";
+import { RelatedServices, Breadcrumbs } from "@/components/cta";
+import { ServiceJsonLd } from "@/components/ServiceJsonLd";
 import type { Metadata } from "next";
 import { Footer } from "@/components";
 
 export const metadata: Metadata = {
-  title: "بيع رسيفرات وأطباق دش عالية الجودة في خميس مشيط | محل حسن للإلكترونيات",
+  title: "برمجة وصيانة رسيفرات خميس مشيط | بيع رسيفرات وأطباق دش",
   description:
-    "بيع رسيفرات وأطباق دش عالية الجودة IPTV وHD بخميس مشيط، مع تركيب وضمان. أفضل محل دش قريب منك بخميس مشيط - محل حسن للإلكترونيات. اتصل 0558202859.",
+    "برمجة وصيانة الرسيفرات في خميس مشيط: تحديث السوفت وير، إعادة البحث عن القنوات، وحل الأعطال، مع بيع وتركيب الرسيفرات وأطباق الدش. اتصل أو واتساب 0558202859.",
   alternates: { canonical: "/services/receivers" },
 };
 
 export default function ReceiversPage() {
   const service = {
-    title: "بيع رسيفرات وأطباق دش عالية الجودة في خميس مشيط",
-    subtitle: "أفضل محل دش قريب منك بخميس مشيط لبيع رسيفرات IPTV وHD وأطباق دش أصلية",
+    title: "برمجة وصيانة رسيفرات خميس مشيط",
+    subtitle: "برمجة الرسيفرات وتحديثها وبيع وتركيب الرسيفرات وأطباق الدش في خميس مشيط",
     image: "/image/services/seven.jpg",
     details: `محل رسيفرات وأطباق دش موثوق في خميس مشيط
 يوفر محل حسن للإلكترونيات مجموعة واسعة من رسيفرات IPTV وHD وأطباق الدش عالية الجودة بأسعار تنافسية.
@@ -64,10 +66,22 @@ export default function ReceiversPage() {
 
   return (
     <div className="min-h-screen flex flex-col" dir="rtl">
+      <ServiceJsonLd
+        name={"برمجة وصيانة رسيفرات خميس مشيط"}
+        description={"بيع وتركيب وبرمجة الرسيفرات وأطباق الدش في خميس مشيط، تحديث السوفت وير وإعادة ترتيب القنوات."}
+        path="/services/receivers"
+      />
+      <Breadcrumbs
+        items={[
+          { name: "الرئيسية", href: "/" },
+          { name: "الخدمات", href: "/#services" },
+          { name: "برمجة وصيانة رسيفرات خميس مشيط" },
+        ]}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 text-white py-20 px-6 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">{service.title}</h1>
-        <h2 className="text-xl md:text-2xl mb-6">{service.subtitle}</h2>
+        <p className="text-lg md:text-xl mb-6 max-w-3xl mx-auto text-blue-100">{service.subtitle}</p>
       </section>
 
       {/* Details Section */}
@@ -167,17 +181,7 @@ export default function ReceiversPage() {
         </ul>
       </section>
 
-      {/* Keywords Section */}
-      <section className="bg-white shadow-inner py-16 px-6">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold mb-6 text-center">كلمات مفتاحية متعلقة برسيفرات وأطباق الدش</h2>
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-lg text-gray-700">
-            {service.keywords.map((keyword, idx) => (
-              <li key={idx}>🔹 {keyword}</li>
-            ))}
-          </ul>
-        </div>
-      </section>
+      <RelatedServices exclude="/services/receivers" />
 
       <Footer />
     </div>

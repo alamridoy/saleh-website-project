@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import {
   PhoneIcon,
   EnvelopeIcon,
@@ -9,157 +10,151 @@ import {
   BuildingOfficeIcon,
   GlobeAltIcon,
 } from "@heroicons/react/24/outline";
+import { business, telHref, whatsappHref, mapsHref, addressLineAr } from "@/config/business";
 
 const CURRENT_YEAR = new Date().getFullYear();
 
-const CONTACT_INFO = {
-  shopName: "محل حسن للإلكترونيات",
-  subtitle: "تركيب وصيانة الدش بخميس مشيط",
-  address:
-    "خميس مشيط - شارع الثلاثين - حي الخالدية - مقابل مدرسة الخالدية الابتدائية",
-  phone: ["966558202859+", "966508805342+"],
-  email: "mdparvez.ahmed.509@gmail.com",
-  hours: "نعمل طوال الأسبوع: 24 ساعة",
-};
-
-const SERVICES = [
-  "محل تركيب دش خميس مشيط",
-  "شركة تركيب دش ابها خميس",
-  "تركيب دش مركزي وعادي بخميس مشيط",
-  "تركيب هوائي الدش في خميس مشيط",
-  "أفضل محل دش قريب منك بخميس مشيط",
-  "صيانة دش ورسيفرات IPTV وHD",
-  "بيع رسيفرات وأطباق دش عالية الجودة",
-  "فني تركيب أطباق الأقمار الصناعية بالقرب مني",
-  "تركيب كاميرات خميس مشيط",
-  "تمديد وتركيب أسلاك دش عالية الجودة",
+const SERVICE_LINKS = [
+  { href: "/services/installation", name: "تركيب دش وأطباق الأقمار الصناعية" },
+  { href: "/services/dishmaintenance", name: "صيانة الدش وضبط الإشارة" },
+  { href: "/services/centraldish", name: "تركيب الدش المركزي" },
+  { href: "/services/receivers", name: "الرسيفرات وأطباق الدش" },
+  { href: "/services/screens", name: "تركيب الشاشات والتلفزيونات" },
+  { href: "/services/cameras", name: "تركيب كاميرات المراقبة" },
 ];
 
 const QUICK_LINKS = [
-  { name: "الرئيسية", href: "#home" },
-  { name: "خدماتنا", href: "#services" },
-  { name: "موقعنا", href: "#location" },
-  { name: "اتصل بنا", href: "#contact" },
+  { name: "الرئيسية", href: "/" },
+  { name: "خدماتنا", href: "/#services" },
+  { name: "فني دش خميس مشيط", href: "/location/khamis-mushait" },
+  { name: "دليل الأعطال", href: "/guides" },
+  { name: "اتصل بنا", href: "/#contact" },
 ];
 
 export function Footer() {
   return (
-    <footer className="bg-white border-t-2 border-gray-100" dir="rtl">
-      <div className="max-w-7xl mx-auto px-6 py-12">
-        {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-          {/* Company Information */}
+    <footer className="border-t-2 border-gray-100 bg-white" dir="rtl">
+      <div className="mx-auto max-w-7xl px-6 py-12">
+        <div className="mb-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+          {/* Company info */}
           <div className="lg:col-span-2">
-            <div className="mb-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-2 flex items-center gap-2">
-                <BuildingOfficeIcon className="w-6 h-6 text-blue-600" />
-                {CONTACT_INFO.shopName}
-              </h3>
-              <p className="text-gray-600 font-medium">{CONTACT_INFO.subtitle}</p>
-            </div>
+            <h3 className="mb-2 flex items-center gap-2 text-xl font-bold text-gray-900">
+              <BuildingOfficeIcon className="h-6 w-6 text-blue-600" />
+              {business.BUSINESS_NAME}
+            </h3>
+            <p className="mb-6 font-medium text-gray-600">{business.TAGLINE}</p>
 
             <div className="space-y-4">
-              {/* Address */}
               <div className="flex items-start gap-3">
-                <MapPinIcon className="w-5 h-5 text-gray-500 mt-0.5 flex-shrink-0" />
-                <p className="text-gray-700 text-sm leading-relaxed">
-                  {CONTACT_INFO.address}
+                <MapPinIcon className="mt-0.5 h-5 w-5 flex-shrink-0 text-gray-500" />
+                <p className="text-sm leading-relaxed text-gray-700">
+                  {business.CITY_AR} - {business.STREET_ADDRESS}
+                  <br />
+                  {addressLineAr}
                 </p>
               </div>
 
-              {/* Phone Numbers */}
               <div className="flex items-center gap-3">
-                <PhoneIcon className="w-5 h-5 text-gray-500" />
-                <span className="text-gray-700 font-medium">
-                  {CONTACT_INFO.phone.map((num, idx) => (
-                    <React.Fragment key={idx}>
-                      <a
-                        href={`tel:${num}`}
-                        className="hover:text-blue-600 transition-colors"
-                      >
-                        {num}
-                      </a>
-                      {idx < CONTACT_INFO.phone.length - 1 && "، "}
-                    </React.Fragment>
-                  ))}
+                <PhoneIcon className="h-5 w-5 text-gray-500" />
+                <span className="font-medium text-gray-700" dir="ltr">
+                  <a href={telHref} className="hover:text-blue-600">
+                    {business.PHONE_DISPLAY}
+                  </a>
                 </span>
               </div>
 
-              {/* Email */}
               <div className="flex items-center gap-3">
-                <EnvelopeIcon className="w-5 h-5 text-gray-500" />
+                <EnvelopeIcon className="h-5 w-5 text-gray-500" />
                 <a
-                  href={`mailto:${CONTACT_INFO.email}`}
-                  className="text-gray-700 hover:text-blue-600 transition-colors"
+                  href={`mailto:${business.EMAIL}`}
+                  className="text-gray-700 hover:text-blue-600"
                 >
-                  {CONTACT_INFO.email}
+                  {business.EMAIL}
                 </a>
               </div>
 
-              {/* Hours */}
               <div className="flex items-center gap-3">
-                <ClockIcon className="w-5 h-5 text-gray-500" />
-                <span className="text-gray-700 text-sm">
-                  {CONTACT_INFO.hours}
+                <ClockIcon className="h-5 w-5 text-gray-500" />
+                <span className="text-sm text-gray-700">
+                  {business.OPENING_HOURS_AR}
                 </span>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <GlobeAltIcon className="h-5 w-5 text-gray-500" />
+                <a
+                  href={mapsHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-cta="maps_click"
+                  className="text-sm font-medium text-blue-700 hover:underline"
+                >
+                  عرض الموقع على خرائط Google
+                </a>
               </div>
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Quick links */}
           <div>
-            <h4 className="font-semibold text-gray-900 mb-4">روابط سريعة</h4>
+            <h4 className="mb-4 font-semibold text-gray-900">روابط سريعة</h4>
             <ul className="space-y-2">
-              {QUICK_LINKS.map((link, index) => (
-                <li key={index}>
-                  <a
+              {QUICK_LINKS.map((link) => (
+                <li key={link.name}>
+                  <Link
                     href={link.href}
-                    className="text-gray-600 hover:text-blue-600 transition-colors text-sm"
+                    className="text-sm text-gray-600 hover:text-blue-600"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Our Services */}
+          {/* Services */}
           <div>
-            <h4 className="font-semibold text-gray-900 mb-4">خدماتنا</h4>
+            <h4 className="mb-4 font-semibold text-gray-900">خدماتنا</h4>
             <ul className="space-y-2">
-              {SERVICES.map((service, index) => (
-                <li key={index} className="text-gray-600 text-sm">
-                  {service}
+              {SERVICE_LINKS.map((s) => (
+                <li key={s.href}>
+                  <Link
+                    href={s.href}
+                    className="text-sm text-gray-600 hover:text-blue-600"
+                  >
+                    {s.name}
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
         </div>
 
-        {/* Contact Call-to-Action */}
-        <div className="bg-blue-50 rounded-lg p-6 mb-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+        {/* CTA */}
+        <div className="mb-8 rounded-lg bg-blue-50 p-6">
+          <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
             <div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-1">
-                هل تحتاج إلى تركيب أو صيانة دش بخميس مشيط؟
+              <h4 className="mb-1 text-lg font-semibold text-gray-900">
+                هل تحتاج إلى فني دش في خميس مشيط؟
               </h4>
-              <p className="text-gray-600 text-sm">
-                تواصل معنا الآن للحصول على أفضل خدمة تركيب وصيانة دش مع فنيين
-                متخصصين
+              <p className="text-sm text-gray-600">
+                تركيب، صيانة، برمجة رسيفر أو ضبط إشارة — تواصل معنا الآن.
               </p>
             </div>
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col gap-3 sm:flex-row">
               <a
-                href={`tel:${CONTACT_INFO.phone[0]}`}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium text-center transition-colors"
+                href={telHref}
+                data-cta="phone_click"
+                className="rounded-lg bg-blue-600 px-6 py-3 text-center font-medium text-white transition hover:bg-blue-700"
               >
                 اتصل الآن
               </a>
               <a
-                href={`https://wa.me/966558202859`}
+                href={whatsappHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium text-center transition-colors"
+                data-cta="whatsapp_click"
+                className="rounded-lg bg-green-600 px-6 py-3 text-center font-medium text-white transition hover:bg-green-700"
               >
                 واتساب
               </a>
@@ -167,29 +162,12 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Bottom Bar */}
         <div className="border-t border-gray-200 pt-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-gray-500 text-sm">
-              &copy; {CURRENT_YEAR} {CONTACT_INFO.shopName} - جميع الحقوق محفوظة.
-            </p>
-
-            <div className="flex items-center gap-4 text-sm text-gray-500">
-              <span className="flex items-center gap-1">
-                <GlobeAltIcon className="w-4 h-4" />
-                المملكة العربية السعودية - خميس مشيط
-              </span>
-            </div>
-          </div>
+          <p className="text-center text-sm text-gray-500">
+            &copy; {CURRENT_YEAR} {business.BUSINESS_NAME} — جميع الحقوق محفوظة.
+            خميس مشيط، منطقة عسير، المملكة العربية السعودية.
+          </p>
         </div>
-      </div>
-
-      {/* ✅ Hidden SEO Keywords */}
-      <div className="sr-only">
-        محل حسن للإلكترونيات يقدم خدمات تركيب دش مركزي وعادي بخميس مشيط،
-        تركيب هوائي الدش، صيانة دش ورسيفرات IPTV وHD، بيع رسيفرات وأطباق دش
-        عالية الجودة، تركيب كاميرات خميس مشيط، تمديد أسلاك دش عالية الجودة،
-        وضبط إشارة الدش باستخدام أحدث الأجهزة.
       </div>
     </footer>
   );

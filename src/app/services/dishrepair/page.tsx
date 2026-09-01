@@ -1,9 +1,11 @@
 import React from "react";
+import { RelatedServices, Breadcrumbs } from "@/components/cta";
+import { ServiceJsonLd } from "@/components/ServiceJsonLd";
 import { Footer } from "@/components";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "إصلاح الدش بخميس مشيط | محل حسن للإلكترونيات",
+  title: "إصلاح أعطال الدش في خميس مشيط | ضعف الإشارة والتقطيع",
   description:
     "خدمة إصلاح الدش بخميس مشيط بقطع غيار أصلية وتشخيص سريع لمشاكل انقطاع الإشارة. محل حسن للإلكترونيات. اتصل 0558202859.",
   alternates: { canonical: "/services/dishrepair" },
@@ -12,7 +14,7 @@ export const metadata: Metadata = {
 export default function Service3Page() {
   const service = {
     title: "إصلاح الدش في خميس مشيط",
-    subtitle: "أفضل الخدمات في جميع الأحياء مع حلول متكاملة بأسعار تنافسية",
+    subtitle: "تشخيص وإصلاح ضعف الإشارة وانقطاع القنوات وتحرك الطبق في خميس مشيط",
     image: "/image/services/three.jpg",
     details: `أهمية صيانة أطباق الأقمار الصناعية
 تُعدّ صيانة أطباق الأقمار الصناعية خدمة أساسية يقدمها فنيو الأطباق المركزية. فخدمة إصلاح أطباق الأقمار الصناعية في خميس مشيط تساعد في ضمان جودة الإشارة وتقليل احتمالية الانقطاعات أو التشويش. تُعتبر أطباق الأقمار الصناعية جزءًا أساسيًا من نظام الطبق المركزي، وأي عطل فيها قد يؤثر على جودة الاستقبال. نحن نقدم أعلى مستوى من الخدمة لصيانة نظام الأقمار الصناعية لديك واستعادته بكفاءة عالية.`,
@@ -70,11 +72,23 @@ export default function Service3Page() {
 
   return (
     <div className="min-h-screen flex flex-col" dir="rtl">
+      <ServiceJsonLd
+        name={"إصلاح أعطال الدش خميس مشيط"}
+        description={"إصلاح أعطال الدش وضعف الإشارة وانقطاع القنوات في خميس مشيط باستخدام أجهزة قياس الإشارة."}
+        path="/services/dishrepair"
+      />
+      <Breadcrumbs
+        items={[
+          { name: "الرئيسية", href: "/" },
+          { name: "الخدمات", href: "/#services" },
+          { name: "إصلاح أعطال الدش خميس مشيط" },
+        ]}
+      />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 text-white py-20 px-6 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">{service.title}</h1>
-        <h2 className="text-xl md:text-2xl mb-6">{service.subtitle}</h2>
+        <p className="text-lg md:text-xl mb-6 max-w-3xl mx-auto text-blue-100">{service.subtitle}</p>
       </section>
 
       {/* Details Section */}
@@ -163,17 +177,7 @@ export default function Service3Page() {
         </ul>
       </section>
 
-      {/* Keywords Section */}
-      <section className="bg-white shadow-inner py-16 px-6">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold mb-6 text-center">إصلاح الدش في خميس مشيط هي الأكثر بحثًا.</h2>
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-lg text-gray-700">
-            {service.keywords.map((keyword, idx) => (
-              <li key={idx}>🔹 {keyword}</li>
-            ))}
-          </ul>
-        </div>
-      </section>
+      <RelatedServices exclude="/services/dishrepair" />
 
       <Footer />
     </div>

@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{\"components/ClientComponents.tsx -> ../components/contact-plugin\":{\"id\":\"components/ClientComponents.tsx -> ../components/contact-plugin\",\"files\":[]}}"
+self.__REACT_LOADABLE_MANIFEST='{"components/ClientComponents.tsx -> ../components/contact-plugin":{"id":76041,"files":[]}}';
