@@ -1,1 +1,1 @@
-self.__NEXT_FONT_MANIFEST='{"pages":{},"app":{"/Users/omorkyumaunto/Data/Project and Related Files/Saleh Sattelite Project/src/app/layout":["static/media/1e41be92c43b3255-s.p.woff2"]},"appUsingSizeAdjust":true,"pagesUsingSizeAdjust":false}';
+self.__NEXT_FONT_MANIFEST='{"pages":{},"app":{"/media/ridoy/project/frontend/saleh-project/src/app/layout":["static/media/1e41be92c43b3255-s.p.woff2"]},"appUsingSizeAdjust":true,"pagesUsingSizeAdjust":false}';

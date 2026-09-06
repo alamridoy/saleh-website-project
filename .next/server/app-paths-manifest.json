@@ -2,13 +2,13 @@
   "/_not-found/page": "app/_not-found/page.js",
   "/robots.txt/route": "app/robots.txt/route.js",
   "/sitemap.xml/route": "app/sitemap.xml/route.js",
-  "/services/cameras/page": "app/services/cameras/page.js",
-  "/services/centraldish/page": "app/services/centraldish/page.js",
   "/page": "app/page.js",
-  "/services/dishmaintenance/page": "app/services/dishmaintenance/page.js",
-  "/services/dishrepair/page": "app/services/dishrepair/page.js",
-  "/services/installation/page": "app/services/installation/page.js",
+  "/services/cameras/page": "app/services/cameras/page.js",
   "/services/customersupport/page": "app/services/customersupport/page.js",
+  "/services/centraldish/page": "app/services/centraldish/page.js",
+  "/services/dishmaintenance/page": "app/services/dishmaintenance/page.js",
+  "/services/receivers/page": "app/services/receivers/page.js",
   "/services/screens/page": "app/services/screens/page.js",
-  "/services/receivers/page": "app/services/receivers/page.js"
+  "/services/dishrepair/page": "app/services/dishrepair/page.js",
+  "/services/installation/page": "app/services/installation/page.js"
 }

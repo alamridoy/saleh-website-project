@@ -1,4 +1,4 @@
-// File: /Users/omorkyumaunto/Data/Project and Related Files/Saleh Sattelite Project/src/app/services/dishmaintenance/page.tsx
+// File: /media/ridoy/project/frontend/saleh-project/src/app/services/dishmaintenance/page.tsx
 import * as entry from '../../../../../src/app/services/dishmaintenance/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

@@ -2,13 +2,13 @@
   "/_not-found/page": "/_not-found",
   "/robots.txt/route": "/robots.txt",
   "/sitemap.xml/route": "/sitemap.xml",
-  "/services/cameras/page": "/services/cameras",
-  "/services/centraldish/page": "/services/centraldish",
   "/page": "/",
-  "/services/dishmaintenance/page": "/services/dishmaintenance",
-  "/services/dishrepair/page": "/services/dishrepair",
-  "/services/installation/page": "/services/installation",
+  "/services/cameras/page": "/services/cameras",
   "/services/customersupport/page": "/services/customersupport",
+  "/services/centraldish/page": "/services/centraldish",
+  "/services/dishmaintenance/page": "/services/dishmaintenance",
+  "/services/receivers/page": "/services/receivers",
   "/services/screens/page": "/services/screens",
-  "/services/receivers/page": "/services/receivers"
+  "/services/dishrepair/page": "/services/dishrepair",
+  "/services/installation/page": "/services/installation"
 }
