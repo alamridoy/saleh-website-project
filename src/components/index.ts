@@ -8,4 +8,3 @@ export * from "./course-card";
 export * from "./feature-card";
 export * from "./footer";
 export * from "./contact-plugin";
-export * from "./cta";

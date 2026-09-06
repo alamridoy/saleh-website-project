@@ -18,16 +18,7 @@
     "afterFiles": [],
     "fallback": []
   },
-  "dynamicRoutes": [
-    {
-      "page": "/guides/[slug]",
-      "regex": "^/guides/([^/]+?)(?:/)?$",
-      "routeKeys": {
-        "nxtPslug": "nxtPslug"
-      },
-      "namedRegex": "^/guides/(?<nxtPslug>[^/]+?)(?:/)?$"
-    }
-  ],
+  "dynamicRoutes": [],
   "staticRoutes": [
     {
       "page": "/",
@@ -40,18 +31,6 @@
       "regex": "^/_not\\-found(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/_not\\-found(?:/)?$"
-    },
-    {
-      "page": "/guides",
-      "regex": "^/guides(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/guides(?:/)?$"
-    },
-    {
-      "page": "/location/khamis-mushait",
-      "regex": "^/location/khamis\\-mushait(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/location/khamis\\-mushait(?:/)?$"
     },
     {
       "page": "/robots.txt",

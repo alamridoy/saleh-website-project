@@ -66,20 +66,19 @@ export function Navbar() {
   const menuItems = [
     { name: "الرئيسية", href: "#home" },
     {
-      name: "خدماتنا",
+      name: "خدمات تركيب وصيانة الدش",
       dropdown: [
-        { name: "تركيب دش وأطباق الأقمار الصناعية", href: "installation" },
-        { name: "صيانة الدش وضبط الإشارة", href: "dishmaintenance" },
-        { name: "إصلاح أعطال الدش", href: "dishrepair" },
-        { name: "تركيب الدش المركزي", href: "centraldish" },
-        { name: "الرسيفرات وأطباق الدش", href: "receivers" },
-        { name: "تركيب الشاشات والتلفزيونات", href: "screens" },
-        { name: "تركيب كاميرات المراقبة", href: "cameras" },
-        { name: "الدعم الفني وخدمة العملاء", href: "customersupport" },
+        { name: "تركيب صحون مركزية", href: "centraldish" },
+        { name: "أفضل محل دش قريب منك بخميس مشيط", href: "dishmaintenance" },
+        { name: "إصلاح الأطباق", href: "dishrepair" },
+        { name: "فني تركيب أطباق الأقمار الصناعية بالقرب مني في خميس مشيط", href: "installation" },
+        { name: "تركيب كاميرات خميس مشيط", href: "cameras" },
+        { name: "بيع رسيفرات وأطباق دش عالية الجودة", href: "receivers" },
+        { name: "فني دش وتركيب شاشات خميس مشيط", href: "screens" },
+        { name: "دعم ومساعدة العملاء", href: "customersupport" },
       ],
     },
-    { name: "خميس مشيط", href: "/location/khamis-mushait" },
-    { name: "الدليل", href: "/guides" },
+    { name: "مناطق التغطية بخميس مشيط", href: "#location" },
     { name: "اتصل بنا", href: "#contact" },
   ];
 
@@ -95,15 +94,11 @@ export function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center group relative">
-            <Link href="/" aria-label="محل حسن للإلكترونيات - الصفحة الرئيسية">
-              <img
-                src="/logos/storelogo.png"
-                alt="شعار محل حسن للإلكترونيات - فني دش خميس مشيط"
-                width={64}
-                height={64}
-                className="h-16 w-16 object-contain rounded-xl shadow-md transition-all duration-500 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(139,92,246,0.4)]"
-              />
-            </Link>
+            <img
+              src="/logos/storelogo.png"
+              alt="شعار محل حسن للإلكترونيات"
+              className="h-16 w-16 object-contain rounded-xl shadow-md transition-all duration-500 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(139,92,246,0.4)]"
+            />
           </div>
 
 
@@ -242,6 +237,16 @@ export function Navbar() {
             </li>
           </ul>
         </div>
+      </div>
+
+      {/* Hidden SEO text */}
+      <div className="sr-only">
+        خدمات محل حسن للإلكترونيات: تركيب دش مركزي وعادي بخميس مشيط لجميع أنواع
+        المنازل والشقق، تركيب هوائي الدش، صيانة دش ورسيفرات IPTV وHD وحل مشاكل
+        انقطاع الإشارة، بيع رسيفرات وأطباق دش عالية الجودة وملحقاتها، تركيب
+        كاميرات خميس مشيط، فني دش وتركيب شاشات خميس مشيط، محل رسيفرات خميس
+        مشيط، اشتراك قنوات بين سبورت، رقم فني رسيفر ودش تركيب، تمديد وتركيب
+        أسلاك دش عالية الجودة، فحص وضبط الإشارة باستخدام أجهزة حديثة.
       </div>
     </nav>
   );

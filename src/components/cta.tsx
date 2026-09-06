@@ -2,7 +2,14 @@
 
 import React from "react";
 import Link from "next/link";
-import { business, telHref, whatsappHref, mapsHref } from "@/config/business";
+
+export const BUSINESS_NAME = "محل حسن للإلكترونيات";
+export const PHONE_NUMBER = "+966558202859";
+export const WHATSAPP_NUMBER = "966558202859";
+
+export const telHref = `tel:${PHONE_NUMBER}`;
+export const whatsappHref = `https://wa.me/${WHATSAPP_NUMBER}`;
+export const mapsHref = "https://maps.app.goo.gl/vL2v7rJFLw8nhcPx8";
 
 /* -------------------------------------------------------------------------- */
 /*  Inline CTA row — phone / WhatsApp / Google Maps                            */
@@ -190,22 +197,6 @@ export function RelatedServices({
               </Link>
             </li>
           ))}
-          <li>
-            <Link
-              href="/location/khamis-mushait"
-              className="block rounded-lg border border-gray-200 bg-white px-4 py-3 font-medium text-gray-700 transition hover:border-blue-400 hover:text-blue-700"
-            >
-              فني دش خميس مشيط — معلومات الموقع والتغطية
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/guides"
-              className="block rounded-lg border border-gray-200 bg-white px-4 py-3 font-medium text-gray-700 transition hover:border-blue-400 hover:text-blue-700"
-            >
-              دليل حلول مشاكل الدش والرسيفر
-            </Link>
-          </li>
         </ul>
         <div className="mt-8 flex justify-center">
           <CtaRow service={title} />
@@ -214,5 +205,3 @@ export function RelatedServices({
     </section>
   );
 }
-
-export { business };

@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 import { Footer } from "@/components";
 
 export const metadata: Metadata = {
-  title: "تركيب كاميرات مراقبة خميس مشيط | فني كاميرات للمنازل والمحلات",
+  title: "تركيب كاميرات خميس مشيط | محل حسن للإلكترونيات",
   description:
     "تركيب كاميرات مراقبة للمنازل والمحلات والشركات في خميس مشيط، مع ربط الكاميرات بالجوال للمتابعة المباشرة. محل حسن للإلكترونيات. اتصل 0558202859.",
   alternates: { canonical: "/services/cameras" },
@@ -13,8 +13,8 @@ export const metadata: Metadata = {
 
 export default function CamerasPage() {
   const service = {
-    title: "تركيب كاميرات مراقبة خميس مشيط",
-    subtitle: "تركيب كاميرات المراقبة للمنازل والمحلات والشركات في خميس مشيط",
+    title: "تركيب كاميرات خميس مشيط",
+    subtitle: "تركيب كاميرات مراقبة احترافية للمنازل والمحلات والشركات في خميس مشيط",
     image: "/image/services/eight.jpg",
     details: `أهمية تركيب كاميرات المراقبة
 تركيب كاميرات المراقبة بشكل صحيح يضمن تغطية شاملة وآمنة لمنزلك أو محلك التجاري، مع تسجيل واضح ليلًا ونهارًا.

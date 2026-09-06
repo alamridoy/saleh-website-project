@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 import { Footer } from "@/components";
 
 export const metadata: Metadata = {
-  title: "تركيب شاشات خميس مشيط | تركيب التلفزيون على الجدار",
+  title: "فني دش وتركيب شاشات خميس مشيط | محل حسن للإلكترونيات",
   description:
     "فني دش وتركيب شاشات خميس مشيط: تركيب الشاشات على الحائط وتوصيلها بالدش والرسيفر بجودة عالية. محل حسن للإلكترونيات. اتصل 0558202859.",
   alternates: { canonical: "/services/screens" },
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function ScreensPage() {
   const service = {
-    title: "تركيب شاشات خميس مشيط",
+    title: "فني دش وتركيب شاشات خميس مشيط",
     subtitle: "تركيب الشاشات على الحائط وتوصيلها بأنظمة الدش والرسيفر باحترافية في خميس مشيط",
     image: "/image/services/six.jpg",
     details: `تركيب شاشات احترافي في خميس مشيط

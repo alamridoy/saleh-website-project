@@ -5,7 +5,7 @@ import { Footer } from "@/components";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "الدعم الفني وخدمة العملاء لأنظمة الدش والرسيفرات في خميس مشيط",
+  title: "محل دش ورسيفرات تركيب مركيزي اشتراك بين.iptv | محل حسن للإلكترونيات",
   description:
     "دعم فني على مدار الساعة لعملاء محل حسن للإلكترونيات في خميس مشيط، لجميع خدمات تركيب وصيانة الدش والكاميرات. اتصل 0558202859.",
   alternates: { canonical: "/services/customersupport" },

@@ -2,16 +2,13 @@
   "/_not-found/page": "/_not-found",
   "/robots.txt/route": "/robots.txt",
   "/sitemap.xml/route": "/sitemap.xml",
-  "/guides/page": "/guides",
-  "/guides/[slug]/page": "/guides/[slug]",
-  "/location/khamis-mushait/page": "/location/khamis-mushait",
   "/services/cameras/page": "/services/cameras",
   "/services/centraldish/page": "/services/centraldish",
-  "/services/dishrepair/page": "/services/dishrepair",
-  "/services/dishmaintenance/page": "/services/dishmaintenance",
-  "/services/customersupport/page": "/services/customersupport",
   "/page": "/",
-  "/services/receivers/page": "/services/receivers",
+  "/services/dishmaintenance/page": "/services/dishmaintenance",
+  "/services/dishrepair/page": "/services/dishrepair",
   "/services/installation/page": "/services/installation",
-  "/services/screens/page": "/services/screens"
+  "/services/customersupport/page": "/services/customersupport",
+  "/services/screens/page": "/services/screens",
+  "/services/receivers/page": "/services/receivers"
 }

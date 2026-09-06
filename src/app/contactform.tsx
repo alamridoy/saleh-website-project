@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { Typography, Button } from "@material-tailwind/react";
 import emailjs from "@emailjs/browser";
-import { CtaRow } from "@/components/cta";
 
 
 export function ContactForm() {
@@ -74,9 +73,8 @@ export function ContactForm() {
           className="mx-auto w-full px-4 font-normal !text-gray-500 lg:w-6/12"
           {...({} as any)}
         >
-          لديك سؤال أو ترغب بالتواصل معنا؟ املأ النموذج وسنعاود الاتصال بك في أقرب وقت، أو تواصل معنا مباشرة.
+          لديك سؤال أو ترغب بالتواصل معنا؟ املأ النموذج وسنعاود الاتصال بك في أقرب وقت.
         </Typography>
-        <CtaRow className="mt-6" />
       </div>
 
       <div className="container mx-auto max-w-2xl">
@@ -152,11 +150,20 @@ export function ContactForm() {
 
           {/* Submit */}
           <div className="flex justify-center">
-            <Button type="submit" color="blue" size="lg" className="mt-4" disabled={isSubmitting} data-cta="contact_form_submit" {...({} as any)}>
+            <Button type="submit" color="blue" size="lg" className="mt-4" disabled={isSubmitting} {...({} as any)}>
               {isSubmitting ? "جاري الإرسال..." : "إرسال"}
             </Button>
           </div>
         </form>
+
+        {/* ✅ Hidden SEO keywords */}
+        <div className="sr-only">
+          تواصل مع محل حسن للإلكترونيات في خميس مشيط لتركيب دش مركزي وعادي وصيانة
+          دش ورسيفرات IPTV وHD، بيع رسيفرات وأطباق دش عالية الجودة، تركيب كاميرات،
+          فني دش وتركيب شاشات خميس مشيط، اشتراك قنوات بين سبورت، وصيانة الأعطال
+          وضبط الإشارة. رقم فني رسيفر ودش تركيب متاح عبر البريد الإلكتروني أو
+          الهاتف أو واتساب.
+        </div>
       </div>
     </section>
   );

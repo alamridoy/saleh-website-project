@@ -1,50 +1,66 @@
 import type { MetadataRoute } from "next";
-import { business } from "@/config/business";
-import { GUIDES } from "./guides/guides-data";
 
 export const dynamic = "force-static";
 
-const baseUrl = business.DOMAIN;
-
-const SERVICE_SLUGS = [
-  "installation",
-  "dishmaintenance",
-  "dishrepair",
-  "centraldish",
-  "receivers",
-  "screens",
-  "cameras",
-  "customersupport",
-];
+const baseUrl = "https://bestdishelectronics.store";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
 
   return [
-    { url: `${baseUrl}/`, lastModified, changeFrequency: "weekly", priority: 1 },
     {
-      url: `${baseUrl}/location/khamis-mushait`,
+      url: `${baseUrl}/`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 1,
+    },
+    {
+      url: `${baseUrl}/services/centraldish`,
       lastModified,
       changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    ...SERVICE_SLUGS.map((s) => ({
-      url: `${baseUrl}/services/${s}`,
-      lastModified,
-      changeFrequency: "monthly" as const,
       priority: 0.8,
-    })),
+    },
     {
-      url: `${baseUrl}/guides`,
+      url: `${baseUrl}/services/dishmaintenance`,
       lastModified,
       changeFrequency: "monthly",
-      priority: 0.6,
+      priority: 0.8,
     },
-    ...GUIDES.map((g) => ({
-      url: `${baseUrl}/guides/${g.slug}`,
+    {
+      url: `${baseUrl}/services/dishrepair`,
       lastModified,
-      changeFrequency: "yearly" as const,
-      priority: 0.5,
-    })),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/services/installation`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/services/cameras`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/services/receivers`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/services/screens`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/services/customersupport`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
   ];
 }
